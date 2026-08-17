@@ -1,0 +1,31 @@
+{
+  "board": "tywe2l-h2",
+  "description": "ESP32-H2-MINI-1-H4S carrier that drops into a Tuya TYWE2L footprint.",
+  "mapping_authority": "docs/pin-mapping-v2.md",
+  "pin_mapping_version": 2,
+  "notes": [
+    "The two GPIO namespaces cross over. ESP8285 GPIO12 becomes H2 GPIO14 and ESP8285 GPIO13 becomes H2 GPIO12. A record where esp8285_gpio equals h2_gpio is a red flag, not a reassurance. Validate on leg, which equals the pad number.",
+    "Leg order is the physical left-to-right order viewed from the module face, per the TYWE2L datasheet in hardware/datasheets/."
+  ],
+  "legs": [
+    { "leg": 1, "pad": 1, "esp8285_gpio": 14, "h2_gpio": 13 },
+    { "leg": 2, "pad": 2, "esp8285_gpio": 12, "h2_gpio": 14 },
+    { "leg": 3, "pad": 3, "esp8285_gpio": 13, "h2_gpio": 12 },
+    { "leg": 4, "pad": 4, "esp8285_gpio": 5, "h2_gpio": 10 },
+    { "leg": 5, "pad": 5, "esp8285_gpio": 4, "h2_gpio": 11 }
+  ],
+  "test_pads": [
+    { "esp8285_gpio": 0, "label": "IO0", "where": "rear test pad" },
+    { "esp8285_gpio": 1, "label": "TXD", "where": "rear test pad" },
+    { "esp8285_gpio": 2, "label": "IO2", "where": "rear test pad" },
+    { "esp8285_gpio": 3, "label": "RXD", "where": "rear test pad" }
+  ],
+  "unavailable": [
+    { "esp8285_gpio": 9, "reason": "not brought out on the TYWE2L at all" },
+    { "esp8285_gpio": 10, "reason": "not brought out on the TYWE2L at all" },
+    { "esp8285_gpio": 15, "reason": "not brought out on the TYWE2L at all" },
+    { "esp8285_gpio": 16, "reason": "not brought out on the TYWE2L at all" },
+    { "esp8285_gpio": -1, "reason": "ADC0/TOUT is not brought out on the TYWE2L, and no host-facing H2 pin under mapping v2 has an ADC channel" }
+  ],
+  "allowed_base": [18]
+}

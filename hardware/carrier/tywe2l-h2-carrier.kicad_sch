@@ -1,0 +1,8542 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "f45f6981-5665-59e6-8622-f201f534b595")
+	(paper "A3")
+	(title_block
+		(title "TYWE2L-2-THREAD carrier - ESP32-H2-MINI-1-H4S drop-in for Tuya TYWE2L")
+		(date "2026-08-13")
+		(rev "A")
+		(company "TYWE2L-2-THREAD open hardware project")
+		(comment 1 "SPDX-License-Identifier: CERN-OHL-S-2.0")
+		(comment 2 "Design record and open items: hardware/DESIGN.md")
+		(comment 3 "Pin mapping v2: host legs on GPIO13/14/12/10/11. Supersedes v1 (GPIO4/5/3/2/1). See docs/pin-mapping-v2.md")
+		(comment 4 "TYWE2L leg hole diameter is assumed - caliper a physical part before fabrication")
+	)
+	(lib_symbols
+		(symbol "TYWE2L-2-THREAD:+3V3"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol, +3V3 rail"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "+3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TYWE2L-2-THREAD:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarised capacitor. SPDX-License-Identifier: CERN-OHL-S-2.0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TYWE2L-2-THREAD:ESP32-H2-MINI-1-H4S"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -20.32 45.72 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "ESP32-H2-MINI-1-H4S"
+				(at -20.32 -45.72 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "TYWE2L-2-THREAD:ESP32-H2-MINI-1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-h2-mini-1_mini-1u_datasheet_en.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "Espressif ESP32-H2-MINI-1-H4S, 802.15.4 Thread/Zigbee + BLE 5 module, 4 MB flash, PCB antenna, 53 pins. SPDX-License-Identifier: CERN-OHL-S-2.0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "License" "CERN-OHL-S-2.0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "ki_keywords" "ESP32-H2 Thread Matter Zigbee BLE RF module"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ESP32-H2-MINI-1-H4S_0_1"
+				(rectangle
+					(start -20.32 43.18)
+					(end 20.32 -43.18)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "ESP32-H2-MINI-1-H4S_1_1"
+				(pin power_in line
+					(at -25.4 30.48 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 27.94 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 40.64 0)
+					(length 5.08)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 25.4 -20.32 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 38.1 180)
+					(length 5.08)
+					(name "IO2/ADC1_CH1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 35.56 180)
+					(length 5.08)
+					(name "IO3/ADC1_CH2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 25.4 -22.86 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 35.56 0)
+					(length 5.08)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 0 180)
+					(length 5.08)
+					(name "IO0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 40.64 180)
+					(length 5.08)
+					(name "IO1/ADC1_CH0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 25.4 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -10.16 180)
+					(length 5.08)
+					(name "IO13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -12.7 180)
+					(length 5.08)
+					(name "IO14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 22.86 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 38.1 0)
+					(length 5.08)
+					(name "VBAT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -7.62 180)
+					(length 5.08)
+					(name "IO12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 25.4 -25.4 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 33.02 180)
+					(length 5.08)
+					(name "IO4/ADC1_CH3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 30.48 180)
+					(length 5.08)
+					(name "IO5/ADC1_CH4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -2.54 180)
+					(length 5.08)
+					(name "IO10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -5.08 180)
+					(length 5.08)
+					(name "IO11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 10.16 180)
+					(length 5.08)
+					(name "IO8~{STRAP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 7.62 180)
+					(length 5.08)
+					(name "IO9~{STRAP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 -15.24 180)
+					(length 5.08)
+					(name "IO22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 5.08 180)
+					(length 5.08)
+					(name "IO25~{STRAP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 17.78 180)
+					(length 5.08)
+					(name "IO26/USB_D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 15.24 180)
+					(length 5.08)
+					(name "IO27/USB_D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 25.4 -27.94 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 25.4 -30.48 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 22.86 180)
+					(length 5.08)
+					(name "RXD0/IO23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 25.4 25.4 180)
+					(length 5.08)
+					(name "TXD0/IO24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 25.4 -33.02 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 25.4 -35.56 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 25.4 -38.1 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 25.4 -40.64 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 20.32 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 17.78 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 15.24 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 12.7 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 10.16 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "40"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 7.62 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "41"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 5.08 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "42"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 2.54 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "43"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 0 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "44"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -2.54 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "45"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -5.08 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "46"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -7.62 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "47"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -10.16 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "48"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -12.7 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "49"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -15.24 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "50"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -17.78 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "51"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -20.32 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "52"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -22.86 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "53"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TYWE2L-2-THREAD:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol, ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TYWE2L-2-THREAD:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor. SPDX-License-Identifier: CERN-OHL-S-2.0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TYWE2L-2-THREAD:TYWE2L_Host_Legs_7P"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at -12.7 29.21 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TYWE2L_Host_Legs_7P"
+				(at -12.7 -29.21 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "TYWE2L-2-THREAD:TYWE2L_Legs_7P_2.0mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://developer.tuya.com/en/docs/iot/tywe2l-module-datasheet"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "Tuya TYWE2L host interface: 7 legs, single row, 2.0 mm pitch, 12.0 mm span. Pin 1 is the leftmost leg viewed from the front (antenna) face. SPDX-License-Identifier: CERN-OHL-S-2.0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "License" "CERN-OHL-S-2.0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(symbol "TYWE2L_Host_Legs_7P_0_1"
+				(rectangle
+					(start -12.7 26.67)
+					(end 0 -26.67)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TYWE2L_Host_Legs_7P_1_1"
+				(pin bidirectional line
+					(at 5.08 22.86 180)
+					(length 5.08)
+					(name "GPIO14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 5.08 15.24 180)
+					(length 5.08)
+					(name "GPIO12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 5.08 7.62 180)
+					(length 5.08)
+					(name "GPIO13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 5.08 0 180)
+					(length 5.08)
+					(name "GPIO5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 5.08 -7.62 180)
+					(length 5.08)
+					(name "GPIO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 5.08 -15.24 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 5.08 -22.86 180)
+					(length 5.08)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TYWE2L-2-THREAD:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 6.985 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Bare copper test pad. SPDX-License-Identifier: CERN-OHL-S-2.0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "HOST LEG MAPPING  v2   (J1, viewed from the FRONT / module face, left to right)\n\n  Leg   TYWE2L net   link    ESP32-H2 pin           LP?   strap?\n   1    GPIO14       R10     GPIO13  (pin 12)       yes    no\n   2    GPIO12       R11     GPIO14  (pin 13)       yes    no\n   3    GPIO13       R12     GPIO12  (pin 16)       yes    no\n   4    GPIO5        R13     GPIO10  (pin 20)       yes    no\n   5    GPIO4        R14     GPIO11  (pin 21)       yes    no\n   6    GND           -      GND\n   7    3V3           -      3V3     (pin 3)\n\n  Authority: docs/pin-mapping-v2.md.  v2 SUPERSEDES v1, which put the five legs\n  on H2 GPIO4, GPIO5, GPIO3, GPIO2 and GPIO1.  The 0 ohm links R10..R14 and the\n  DNP pull-downs R20..R24 follow their host lines to the new pins, unchanged.\n\n  NAMING HAZARD.  ESP8285 GPIO12/13/14 are LEG nets, H2 GPIO12/13/14 are MODULE\n  pins, and under v2 the two are crossed.  The net names keep them apart:\n  HOST_GPIOxx is always a leg, H2_IOxx is always a module pin.  Say which one.\n\n  Legs are 2.0 mm pitch, 12.0 mm span, 1.436 mm from the left board edge and\n  1.564 mm from the right (TYWE2L datasheet Fig. 3, p.16).  The row therefore\n  sits 0.064 mm off centre.  That is the real part; it is reproduced, not fixed."
+		(exclude_from_sim no)
+		(at 302 19.2 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "0a9522b5-a964-5d7e-84ea-6965be9ebf09")
+	)
+	(text "WHY THESE FIVE PINS   (H2 GPIO10, GPIO11, GPIO12, GPIO13, GPIO14)\n\n  1  NONE IS A STRAPPING PIN.  TRM section 8.2.2: the reset values of GPIO9,\n     GPIO8, GPIO3 and GPIO2 determine the boot mode, and Register 6.7\n     GPIO_STRAP_REG latches GPIO2 on bit 0 and GPIO3 on bit 1, with bits 5..15\n     marked invalid, so that list is exhaustive.  v1 put host-driven nets on two\n     of them.  Nothing a host does to a v2 leg can change boot mode.\n\n  2  ALL FIVE ARE RESET CODE 0 (TRM Table 6.13-1): input disabled, output\n     disabled, no pull.  The pad is inert from power-on until firmware configures\n     it, so the host sees an open circuit and the chip never contests the net.\n     Under v1 the legs came up with their input buffers enabled.\n\n  3  NONE IS A JTAG PAD.  MTMS/MTDO/MTCK/MTDI are GPIO2..GPIO5, all of which v2\n     leaves in the spare field, so EFUSE_DIS_USB_JTAG can no longer reach a host\n     net at all, burnt or not.\n\n  4  GPIO4 IS VETOED AS A HOST LINE.  Its MTCK after-reset weak pull-up is\n     present whenever EFUSE_DIS_PAD_JTAG = 0, which is every factory part, and it\n     holds from reset release through app init, on the order of 200 to 400 ms.\n     That is long enough to actuate a relay.  No leg goes on GPIO4, ever.\n\n  5  ALL FIVE ARE LP PINS, so every leg can wake the chip from deep sleep.  No\n     v1 leg could.  Free capability, unused by this product today.\n\n  THE v1 \"KEEP ADC ON EVERY LEG\" RATIONALE IS WITHDRAWN AS WRONG, not softened.\n  The ESP8266EX has exactly ONE ADC pin, TOUT, and the TYWE2L does not bring it\n  out: datasheet Table 1 lists seven interface pins and no TOUT anywhere.  No host\n  device can ever present an analogue signal on any leg, so v1 optimised the legs\n  for something physically impossible and paid for it with two legs on strapping\n  pins.  All five ADC1 channels now sit on the spare pad field, where a future\n  revision of this carrier could genuinely use one."
+		(exclude_from_sim no)
+		(at 302 60.07 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "1ccf288d-448f-5e17-9ab1-644a1779492a")
+	)
+	(text "HARD RULE - VBAT MUST NEVER BE FED FROM A SEPARATE SUPPLY\n\n  H2 GPIO12, GPIO13 and GPIO14 - legs 3, 1 and 2 - sit on the VBAT / VDDA_PMU\n  power domain, not VDDPST1 (ESP32-H2 datasheet v1.3 Table 2-1 \"Pin Providing\n  Power\" and Table 2-7).  Logic levels are referred to the pin's OWN domain:\n  Table 5-3 note 1, VIH = 0.75 x VDD, VIL = 0.25 x VDD, VOH = 0.8 x VDD.\n\n  Inert as built.  The module ties VBAT (pin 15) to its internal 3V3 through a\n  0 ohm link and this carrier leaves pin 15 unconnected, so all five legs sit at\n  the same 3.3 V.\n\n  Feed VBAT from a battery or any other rail and three of the five host legs take\n  different input thresholds and different output swings from the other two, on\n  the same host connector, with nothing to warn whoever did it.  Therefore:\n\n  VBAT STAYS ON THE MODULE'S INTERNAL 3V3 TIE while host lines sit on GPIO12,\n  GPIO13 and GPIO14.  This is a CONSTRAINT, not a default that may be changed for\n  convenience.  Changing it means re-doing the pin mapping first.  Reasoning in\n  docs/pin-mapping-v2.md section 2.5."
+		(exclude_from_sim no)
+		(at 302 118.62 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "a3cb8f82-6eac-5678-987d-e279a937d29a")
+	)
+	(text "SUPPORT CIRCUITRY\n\n  R1 / C1    EN power-up RC delay, 10k with 1 uF.  This is the Espressif\n             reference value: module datasheet p.34, \"the recommended\n             setting for the RC delay circuit is usually R = 10 kOhm and\n             C = 1 uF\".  Tune only if the host 3V3 rise time demands it.\n  R2         GPIO8 pull-up 10k.  GPIO8 defaults to floating (Table 4, p.11)\n             and must read high for Joint Download Boot (Table 6, p.12).\n             Independently correct; under v2 it is no longer load-bearing\n             for host-line safety.\n  R3         GPIO9 pull-up 10k.  There is a weak internal pull-up already;\n             the external part makes the TYWE2L \"hold IO0 low through reset\n             to flash\" behaviour deterministic on the rear test pad.\n  R4         GPIO25 pull-UP 10k, MANDATORY.  Datasheet p.13: GPIO25 \"does not\n             have any internal pull resistors and the strapping value must be\n             controlled by the external circuit that cannot be in a high\n             impedance state\".  Table 9 (p.14): GPIO25 = 1 selects the USB\n             Serial/JTAG controller, GPIO25 = 0 selects the JTAG pads\n             MTDI/MTCK/MTMS/MTDO = GPIO5/GPIO4/GPIO2/GPIO3.  Under v2 none of\n             those four is a host line, so this can no longer seize a host\n             net.  Kept because the pin must not float and because it keeps\n             the spare pad field ordinary GPIO.\n  C2/C3/C4   10 uF + 100 nF + 22 uF bulk on the module 3V3 rail.\n  R10..R14   0 ohm 0402 series links, FITTED by default.  Remove one to\n             isolate a contentious host net during bring-up.\n  R20..R24   10k pull-downs, DNP by default.  Optional insurance for an\n             unknown host; no longer a mitigation for anything on our side.\n  VBAT       Pin 15 is deliberately left unconnected.  Datasheet Table 3\n             p.10: \"Connected to internal 3V3 power supply (Default)\".  It\n             MUST stay that way - see the VBAT hard rule above."
+		(exclude_from_sim no)
+		(at 302 154.19 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "38144e64-e4cd-5fd4-859f-96a65b1dc742")
+	)
+	(text "MECHANICAL - OPTION A\n\n  Carrier 15.0 mm wide (exact TYWE2L match) x 13.6 mm tall x 0.6 mm thick.\n  The MINI-1 body sits with its lower edge 2.4 mm above the carrier bottom\n  edge, so the top 5.4 mm of the module overhangs the carrier into free air.\n  Antenna keepout measured off datasheet Fig. 11 (p.38): the keepout boundary\n  is 11.2 mm from the far edge of a 16.6 mm body, so the keepout is the top\n  5.4 mm, full 13.2 mm width.  No FR4 and no copper sit under it.\n  Stack: 0.6 mm PCB + 2.4 mm module = 3.0 mm, matching the TYWE2L, before\n  rear-side parts.  Board height 19.0 mm against the TYWE2L's 17.272 mm.\n\nOPEN ITEMS - VERIFY BEFORE FABRICATION\n  1  TYWE2L LEG HOLE DIAMETER AND SPAN.  STILL OPEN.  BLOCKER FOR FABRICATION.\n     The 0.9 mm hole and 1.4 mm pad in the leg footprint are an ASSUMPTION, not\n     a measurement; Tuya never publishes the leg diameter.  CALIPER A PHYSICAL\n     TYWE2L BEFORE ORDERING BOARDS.  Every routing-channel figure scales\n     directly off this number: a 1.0 mm hole with a 1.5 mm pad drops the\n     leg-to-module channel from 0.750 to 0.700 mm.\n  2  Antenna keepout extent - cross-check the ESP32-H2 Hardware Design\n     Guidelines, \"Positioning a Module on a Base Board\".\n  3  GPIO drive strength.  TYWE2L is 12 mA max per I/O with no programmable\n     drive; the H2 default DRV = 2 is about 20 mA.  Firmware should clamp\n     PAD_DRIVER on the five host lines rather than leave the default.\n  4  ESP8285 leg reset states - bench measurement on a real part is the only\n     route left; the source spreadsheet no longer exists.\n\nCLOSED BY PIN MAPPING v2\n  -  Strapping pin count, GPIO2/GPIO3: SETTLED, they ARE strapping pins (TRM\n     Register 6.7 bits 0 and 1).  v2 takes both off the host legs.\n  -  GPIO4 reset-time pull-up: CONFIRMED, present on every factory part.  v2\n     takes GPIO4 off the host legs.\n  Full reasoning in hardware/DESIGN.md and docs/pin-mapping-v2.md."
+		(exclude_from_sim no)
+		(at 205 210 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "607c355d-1c54-5579-89e6-434134dd3315")
+	)
+	(text "TYWE2L-2-THREAD CARRIER   ESP32-H2-MINI-1-H4S in a Tuya TYWE2L footprint\nSPDX-License-Identifier: CERN-OHL-S-2.0\nDesign record and open items: hardware/DESIGN.md\nSources: TYWE2L datasheet v20210119; ESP32-H2-MINI-1 & MINI-1U datasheet v1.6;\nESP32-H2 datasheet v1.3; ESP32-H2 TRM v1.1; ESP32-H2 SoC Errata v1.3.\nPin mapping v2 is settled in docs/pin-mapping-v2.md and is the authority."
+		(exclude_from_sim no)
+		(at 302 8 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "8593ccb1-7d4c-5062-bee2-4614ab246be8")
+	)
+	(text "DEVIATION FROM THE ESP8285 THIS REPLACES\n\n  v1 put leg 1 on H2 GPIO4, which carries a weak internal pull-up after reset on\n  every factory part (EFUSE_DIS_PAD_JTAG = 0; ESP32-H2 datasheet Table 2-1 note 4,\n  TRM Table 6.13-1 footnote 1*).  Into a relay driver or a MOSFET gate that meant\n  a guaranteed actuation on every power-up, held for 200 to 400 ms.  v2 removes\n  the deviation at source: GPIO4 is off the host interface entirely, and all five\n  v2 legs are reset code 0, so nothing drives and nothing pulls.\n\n  R20..R24 were fitted as the mitigation for that pull-up.  They stay, DNP, as\n  optional insurance for an unknown host.  Nothing on our side depends on them.\n\n  ESP8285 leg reset states are NOT established and cannot be from public sources;\n  the ESP8266 Pin List that carried them no longer exists anywhere.  Treat a leg\n  as INDETERMINATE at power-up, which is the weaker and safer assumption."
+		(exclude_from_sim no)
+		(at 20 210 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "a5cb4581-92a7-55b8-8637-5b9fd514261c")
+	)
+	(text "REAR TEST PADS   (replicating the TYWE2L rear face, plus extras)\n\n  TX  -> TXD0  pin 31        RX  -> RXD0  pin 30        RST -> EN  pin 8\n  IO0 -> GPIO9 pin 23, the ESP32-H2 download strap, so the TYWE2L habit of\n         holding IO0 low through reset to flash still works.\n  IO2 -> GPIO22 pin 24, spare / secondary log.          2 x GND.\n  TP8/TP9  = GPIO26/GPIO27 = USB D-/D+, native USB Serial/JTAG flashing.\n  TP10..TP15 spare pad field, RECUT FOR v2 to carry the freed ADC1 pins:\n         TP10  GPIO0                      TP11  GPIO1  ADC1_CH0\n         TP12  GPIO2  STRAP, ADC1_CH1     TP13  GPIO3  STRAP, ADC1_CH2\n         TP14  GPIO4  ADC1_CH3, MTCK      TP15  GPIO5  ADC1_CH4, MTDI\n\n  TP12 AND TP13 ARE BOOT-MODE STRAPPING PINS (GPIO_STRAP_REG bits 0 and 1).  Do\n  not hang a load, a pull or a driven signal on either of them.  TP14 carries the\n  MTCK after-reset pull-up, so treat it the same way.  TP11 and TP15 are the clean\n  pads.  ADC1 is 100 kSPS max with DNL -8/+12 LSB, and ADC1_CH4 (GPIO5) is dead on\n  chip revisions v0.0 and v0.1 per erratum ADC-7227, fixed in v1.2."
+		(exclude_from_sim no)
+		(at 112 210 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "ef6ba7e6-0780-5825-b146-e3c482c3dce7")
+	)
+	(junction
+		(at 147.32 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "01db4f3e-d0a7-5468-91cb-b9bbae4b2e50")
+	)
+	(junction
+		(at 147.32 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "089a8682-c173-5939-86b2-6f397cab4c8f")
+	)
+	(junction
+		(at 147.32 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c88ea32-a77d-5a38-a43d-1e07aef11cd0")
+	)
+	(junction
+		(at 76.2 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1cc85093-671e-50b0-919b-c0e52be5c2e6")
+	)
+	(junction
+		(at 147.32 137.16)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "27cd4784-2aff-5e22-94f6-3aafea863c12")
+	)
+	(junction
+		(at 147.32 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "29526e0b-dc7c-5d3f-b458-c06b02aa2207")
+	)
+	(junction
+		(at 147.32 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2b408fc5-6c1c-5139-9fbe-551dd7100f43")
+	)
+	(junction
+		(at 147.32 167.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2efc192c-f011-540b-a75a-5d5c38f8971c")
+	)
+	(junction
+		(at 147.32 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4662829b-5930-5d5d-b4fc-b731dc2faffa")
+	)
+	(junction
+		(at 147.32 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "585e14f4-38ea-5a17-a9bd-922389a900a9")
+	)
+	(junction
+		(at 147.32 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "691c3a05-aad0-5643-9a78-62f1bea44581")
+	)
+	(junction
+		(at 147.32 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "801d7911-4375-5310-8500-18045ca58685")
+	)
+	(junction
+		(at 147.32 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "85ed72a2-e5b7-5de2-b118-8aff0f36c544")
+	)
+	(junction
+		(at 147.32 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94e21603-5c6a-5ed0-92a8-4cdd3b339aa1")
+	)
+	(junction
+		(at 147.32 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9a2aa690-0cb8-5c3e-a633-14a7a03badf5")
+	)
+	(junction
+		(at 147.32 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b4cec541-558e-52d0-b83d-99f1d57fd9c1")
+	)
+	(junction
+		(at 147.32 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0b785db-fa37-58fb-9643-cf1928bf0722")
+	)
+	(junction
+		(at 147.32 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c31c36c7-de61-58c7-9973-fd06c702a5ef")
+	)
+	(junction
+		(at 147.32 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec788168-c802-5c9f-8435-b7b4b6c6feca")
+	)
+	(junction
+		(at 147.32 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4a65fea-8af0-5773-8d9e-82cb94578f43")
+	)
+	(junction
+		(at 147.32 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f8010f8f-2797-5bd9-9101-588f6115108b")
+	)
+	(junction
+		(at 147.32 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd3dc27a-df16-5e56-8676-c369f1c9f627")
+	)
+	(no_connect
+		(at 203.2 187.96)
+		(uuid "0e2e6c2a-09ba-5b9b-a844-e1255bd87169")
+	)
+	(no_connect
+		(at 203.2 177.8)
+		(uuid "3b7472cc-8a92-5441-b7cf-8b11f9ecec02")
+	)
+	(no_connect
+		(at 203.2 172.72)
+		(uuid "41f3d601-ef96-5096-9b27-46b41a87005d")
+	)
+	(no_connect
+		(at 203.2 190.5)
+		(uuid "49df18f6-d361-51aa-810d-7a9bba022440")
+	)
+	(no_connect
+		(at 203.2 180.34)
+		(uuid "721095d8-eafc-555e-84a7-a973e77c12e6")
+	)
+	(no_connect
+		(at 203.2 175.26)
+		(uuid "85e84c17-ad0b-5e77-816d-748c53b06d2e")
+	)
+	(no_connect
+		(at 203.2 170.18)
+		(uuid "92592002-823c-536e-8172-f0f4d4bf2368")
+	)
+	(no_connect
+		(at 203.2 185.42)
+		(uuid "9511781e-e87a-56c4-9e61-e5af6a524b12")
+	)
+	(no_connect
+		(at 203.2 182.88)
+		(uuid "b6bff09b-764e-58d6-90b3-c32bcdb5ea14")
+	)
+	(no_connect
+		(at 152.4 111.76)
+		(uuid "f5c94e19-55a4-5353-8c76-26ca6663c301")
+	)
+	(wire
+		(pts
+			(xy 127 171.45) (xy 127 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "026f19cd-145d-52ef-a1f4-f24d0a685798")
+	)
+	(wire
+		(pts
+			(xy 203.2 109.22) (xy 208.28 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "056e196a-86c4-562b-90cc-bce2fc5cd136")
+	)
+	(wire
+		(pts
+			(xy 152.4 142.24) (xy 147.32 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "081ae896-5a46-5bcf-95fe-cfbcaa140774")
+	)
+	(wire
+		(pts
+			(xy 152.4 165.1) (xy 147.32 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a6adcf0-0136-53e4-b600-f2c054591c02")
+	)
+	(wire
+		(pts
+			(xy 55.88 46.99) (xy 55.88 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bc2c468-686b-53e3-9584-00982826e913")
+	)
+	(wire
+		(pts
+			(xy 231.14 41.91) (xy 231.14 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e073837-f9bb-5ccc-b660-8814b86a95df")
+	)
+	(wire
+		(pts
+			(xy 152.4 129.54) (xy 147.32 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0eb2acfe-1c2a-5d28-98ca-52ae9a8f03f8")
+	)
+	(wire
+		(pts
+			(xy 152.4 121.92) (xy 147.32 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "132eb300-70ff-5e3c-8f22-74fdddebe356")
+	)
+	(wire
+		(pts
+			(xy 203.2 127) (xy 208.28 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14410221-c921-5ff4-a918-54d9cc900ef9")
+	)
+	(wire
+		(pts
+			(xy 152.4 162.56) (xy 147.32 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17362b85-8591-51b5-a393-d7e8b0bda089")
+	)
+	(wire
+		(pts
+			(xy 35.56 114.3) (xy 59.69 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19da20af-5e2c-5f2b-979d-c87d2c04d2db")
+	)
+	(wire
+		(pts
+			(xy 203.2 157.48) (xy 208.28 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ee51b23-ee5b-5814-a340-2bd80f1c21f5")
+	)
+	(wire
+		(pts
+			(xy 101.6 171.45) (xy 101.6 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20895f05-d03b-50e5-bee4-de86822c2c60")
+	)
+	(wire
+		(pts
+			(xy 259.08 132.08) (xy 259.08 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "208ad000-9ed8-57d0-b838-04c226ff5cc5")
+	)
+	(wire
+		(pts
+			(xy 203.2 149.86) (xy 208.28 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "238c9b7f-dcf1-52a2-bfe8-1e772607bf70")
+	)
+	(wire
+		(pts
+			(xy 227.33 132.08) (xy 227.33 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25f0ba3f-a0e6-5a7f-a97c-1ee43c11a9fa")
+	)
+	(wire
+		(pts
+			(xy 139.7 171.45) (xy 139.7 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "265625b6-3cfb-5554-8326-9e463ffe6ddc")
+	)
+	(wire
+		(pts
+			(xy 203.2 119.38) (xy 208.28 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "273aec79-91ac-51c8-b9d3-2fbd826e725d")
+	)
+	(wire
+		(pts
+			(xy 67.31 137.16) (xy 83.82 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2efc2191-41c0-51f8-ac19-c46f2af18936")
+	)
+	(wire
+		(pts
+			(xy 203.2 144.78) (xy 208.28 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30c55fcb-12d4-5d23-9e46-4f4c5e3a770e")
+	)
+	(wire
+		(pts
+			(xy 152.4 149.86) (xy 147.32 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3221eba2-89ba-5a0d-be6a-21e29afe405a")
+	)
+	(wire
+		(pts
+			(xy 43.18 54.61) (xy 43.18 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "342f2934-715a-5426-b775-d151d6c80919")
+	)
+	(wire
+		(pts
+			(xy 152.4 137.16) (xy 147.32 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35b8458a-d52f-5598-b911-94b6019979cd")
+	)
+	(wire
+		(pts
+			(xy 30.48 46.99) (xy 30.48 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39cc448d-acd6-5154-a7cf-71658d03e9f2")
+	)
+	(wire
+		(pts
+			(xy 88.9 179.07) (xy 88.9 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c7ebc99-1aae-59ed-b408-a69532e8603d")
+	)
+	(wire
+		(pts
+			(xy 152.4 139.7) (xy 147.32 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cd4a58f-dce5-5ab7-b61c-0e2c92f6c1e3")
+	)
+	(wire
+		(pts
+			(xy 261.62 49.53) (xy 261.62 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e0810ec-f96c-5932-ba1b-d0700c10c093")
+	)
+	(wire
+		(pts
+			(xy 259.08 195.58) (xy 259.08 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e2db5dd-1e2c-5a74-a252-94e95c420cc3")
+	)
+	(wire
+		(pts
+			(xy 76.2 54.61) (xy 88.9 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f456236-2d11-5622-a347-f7b1aa38e3d2")
+	)
+	(wire
+		(pts
+			(xy 152.4 147.32) (xy 147.32 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fcd3d27-2546-5e3a-8180-c7a97b2b8d2e")
+	)
+	(wire
+		(pts
+			(xy 203.2 139.7) (xy 208.28 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42095753-17ce-58ae-b3d2-7116510c0507")
+	)
+	(wire
+		(pts
+			(xy 30.48 54.61) (xy 30.48 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "485d4da5-79bb-5c8a-9423-eb945f3162a6")
+	)
+	(wire
+		(pts
+			(xy 246.38 41.91) (xy 246.38 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4925134d-d208-585d-8477-435a30d96b19")
+	)
+	(wire
+		(pts
+			(xy 246.38 49.53) (xy 246.38 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a5a9ca3-a1da-50e9-9c42-6358834b59ec")
+	)
+	(wire
+		(pts
+			(xy 259.08 182.88) (xy 259.08 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c7fea1d-ced6-53d8-aea4-1d3e665c6864")
+	)
+	(wire
+		(pts
+			(xy 203.2 152.4) (xy 208.28 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c95e747-99d5-5adb-891e-fff37ff46504")
+	)
+	(wire
+		(pts
+			(xy 139.7 179.07) (xy 139.7 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4db02fef-4025-5500-b29a-7a354794d56d")
+	)
+	(wire
+		(pts
+			(xy 35.56 152.4) (xy 45.72 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5090ac84-1bc5-5665-b86c-af6ddfd58544")
+	)
+	(wire
+		(pts
+			(xy 203.2 116.84) (xy 208.28 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51dfcf05-1816-5430-8a40-8faff52de2e4")
+	)
+	(wire
+		(pts
+			(xy 152.4 172.72) (xy 147.32 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "573ed77d-966f-5402-ad13-2c99d5f61328")
+	)
+	(wire
+		(pts
+			(xy 67.31 114.3) (xy 83.82 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "581855c4-de08-52a8-9a98-434350c5e7fb")
+	)
+	(wire
+		(pts
+			(xy 259.08 157.48) (xy 259.08 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a56103b-73d3-5a50-b5b6-2af29591c6b6")
+	)
+	(wire
+		(pts
+			(xy 152.4 152.4) (xy 147.32 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "612d2865-679a-5db7-a41b-fda2f6992cfd")
+	)
+	(wire
+		(pts
+			(xy 35.56 160.02) (xy 45.72 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61b75f4e-ad3b-5adc-8126-588f43de8faa")
+	)
+	(wire
+		(pts
+			(xy 259.08 144.78) (xy 259.08 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "626c95b9-e079-5ef7-9168-c3035c833c39")
+	)
+	(wire
+		(pts
+			(xy 203.2 124.46) (xy 208.28 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62cd05fa-4b9c-5f4e-992e-5dc48df47913")
+	)
+	(wire
+		(pts
+			(xy 114.3 179.07) (xy 114.3 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64bbe842-baba-5e4c-8632-2ad922b07e0e")
+	)
+	(wire
+		(pts
+			(xy 152.4 154.94) (xy 147.32 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65af3d33-c212-539e-8ed1-a2a69b967794")
+	)
+	(wire
+		(pts
+			(xy 227.33 144.78) (xy 227.33 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6683493d-0df2-5de1-a1c4-f69c4081894f")
+	)
+	(wire
+		(pts
+			(xy 259.08 119.38) (xy 259.08 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66c3af68-5beb-56b5-8774-b0c864bbe5a7")
+	)
+	(wire
+		(pts
+			(xy 114.3 171.45) (xy 114.3 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69d902ae-d7cd-5a45-94e5-2f7b9954638a")
+	)
+	(wire
+		(pts
+			(xy 152.4 157.48) (xy 147.32 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70878282-438c-5f53-8510-21ef67f08063")
+	)
+	(wire
+		(pts
+			(xy 67.31 144.78) (xy 83.82 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74e65ec8-5bd4-53aa-b9fc-df12bd19226e")
+	)
+	(wire
+		(pts
+			(xy 259.08 170.18) (xy 259.08 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fbe9450-f58c-560d-a81f-fa8259348672")
+	)
+	(wire
+		(pts
+			(xy 203.2 162.56) (xy 208.28 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85b5388f-f609-5a7d-b8b3-50c317433009")
+	)
+	(wire
+		(pts
+			(xy 227.33 170.18) (xy 227.33 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d088e9e-f8e6-54b4-ba84-781b34099afd")
+	)
+	(wire
+		(pts
+			(xy 67.31 129.54) (xy 83.82 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "930944d3-683a-5008-87e9-a6f1b7f95ce5")
+	)
+	(wire
+		(pts
+			(xy 67.31 121.92) (xy 83.82 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93a062ac-9bab-5a16-97c5-031230447dba")
+	)
+	(wire
+		(pts
+			(xy 152.4 114.3) (xy 142.24 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94a2e606-f855-5e77-9de1-7c03f466afa6")
+	)
+	(wire
+		(pts
+			(xy 203.2 142.24) (xy 208.28 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "967864eb-5d4e-5919-933c-0535a3a9ec96")
+	)
+	(wire
+		(pts
+			(xy 35.56 144.78) (xy 59.69 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9af6abf7-68ec-5f33-9f9a-15af0bc6bef8")
+	)
+	(wire
+		(pts
+			(xy 35.56 129.54) (xy 59.69 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c2dddd7-19e4-53e9-81e0-5f2a041db5c8")
+	)
+	(wire
+		(pts
+			(xy 152.4 167.64) (xy 147.32 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e501491-4268-5267-b3e1-4b90311f0dc6")
+	)
+	(wire
+		(pts
+			(xy 203.2 165.1) (xy 208.28 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0dc3c42-dbc3-5348-8c0f-a7f14fd9ed72")
+	)
+	(wire
+		(pts
+			(xy 152.4 109.22) (xy 147.32 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6dff83f-be6a-58be-8aab-56f7203d830f")
+	)
+	(wire
+		(pts
+			(xy 203.2 134.62) (xy 208.28 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac7deb20-c47c-5687-8202-f8c7ca744498")
+	)
+	(wire
+		(pts
+			(xy 152.4 170.18) (xy 147.32 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aee3ebf5-fb54-5a65-b255-29db8f94947a")
+	)
+	(wire
+		(pts
+			(xy 227.33 106.68) (xy 227.33 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1f80347-dbb7-5ccb-b256-25869941e24b")
+	)
+	(wire
+		(pts
+			(xy 227.33 119.38) (xy 227.33 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b372246a-4291-58b1-b8a0-c2788af4dabc")
+	)
+	(wire
+		(pts
+			(xy 152.4 132.08) (xy 147.32 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b426861b-db69-5379-aa33-734e901fc897")
+	)
+	(wire
+		(pts
+			(xy 76.2 66.04) (xy 76.2 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b58a8398-0ca4-59e4-914f-cc0de6b6755d")
+	)
+	(wire
+		(pts
+			(xy 127 179.07) (xy 127 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8375eb2-6d31-5e34-befa-39198e191c92")
+	)
+	(wire
+		(pts
+			(xy 203.2 132.08) (xy 208.28 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0ddf923-e2f3-50c4-bab0-20b2ed8fb3c4")
+	)
+	(wire
+		(pts
+			(xy 203.2 114.3) (xy 208.28 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3ba3973-6e81-599b-8462-cef0cf7d12e5")
+	)
+	(wire
+		(pts
+			(xy 55.88 54.61) (xy 55.88 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d400efa9-80f1-5207-9121-c3dc8b6e8b95")
+	)
+	(wire
+		(pts
+			(xy 152.4 127) (xy 147.32 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d70c8472-cede-5178-8fd5-ab41e905d165")
+	)
+	(wire
+		(pts
+			(xy 152.4 134.62) (xy 147.32 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d94aa408-10d2-5663-867b-40797b3d4302")
+	)
+	(wire
+		(pts
+			(xy 227.33 182.88) (xy 227.33 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dafd3fd0-cfd4-557d-a48d-8ce0391ad1ba")
+	)
+	(wire
+		(pts
+			(xy 35.56 121.92) (xy 59.69 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df0c0ad4-9f8d-59cb-af6b-51b3e09997f4")
+	)
+	(wire
+		(pts
+			(xy 227.33 157.48) (xy 227.33 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e27593fc-725b-5a58-9405-3999b02736be")
+	)
+	(wire
+		(pts
+			(xy 152.4 160.02) (xy 147.32 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7376247-42cf-5a1d-a130-ac80c6e0cc12")
+	)
+	(wire
+		(pts
+			(xy 88.9 171.45) (xy 88.9 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8970226-119b-5fdd-be70-c19e7ed95799")
+	)
+	(wire
+		(pts
+			(xy 147.32 119.38) (xy 147.32 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e94f1ac3-8fbf-5843-86a2-0d4ccee4516f")
+	)
+	(wire
+		(pts
+			(xy 203.2 160.02) (xy 208.28 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecb33947-5b74-5dc9-af0b-a0d014853b55")
+	)
+	(wire
+		(pts
+			(xy 152.4 119.38) (xy 147.32 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eda3171f-e212-55b7-9d18-7d14b0427444")
+	)
+	(wire
+		(pts
+			(xy 101.6 179.07) (xy 101.6 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee3f9354-9e82-50ef-8f5d-c239fd487cf5")
+	)
+	(wire
+		(pts
+			(xy 152.4 144.78) (xy 147.32 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f09136ae-7c04-5287-8833-a794e60be9f6")
+	)
+	(wire
+		(pts
+			(xy 76.2 49.53) (xy 76.2 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f21ad7a5-4e22-5468-8c30-d4db3bfb9e4e")
+	)
+	(wire
+		(pts
+			(xy 261.62 41.91) (xy 261.62 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f249a4b6-7255-5215-91c1-55f9426cfa67")
+	)
+	(wire
+		(pts
+			(xy 43.18 46.99) (xy 43.18 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2b179ae-1fe7-5829-b7eb-8a334e4ea389")
+	)
+	(wire
+		(pts
+			(xy 35.56 137.16) (xy 59.69 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2c27376-1dea-5c75-b032-7808fc8a2ec3")
+	)
+	(wire
+		(pts
+			(xy 76.2 41.91) (xy 76.2 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3f72e14-0940-552c-8b3d-fdd1605bc2f4")
+	)
+	(wire
+		(pts
+			(xy 259.08 106.68) (xy 259.08 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4ddecf2-7902-5148-8972-3e6813a8f284")
+	)
+	(wire
+		(pts
+			(xy 152.4 124.46) (xy 147.32 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f67f6040-eae1-5746-97ab-77ceb1b18356")
+	)
+	(wire
+		(pts
+			(xy 231.14 49.53) (xy 231.14 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb42f266-8dce-5fe0-80e5-77b5868bae43")
+	)
+	(wire
+		(pts
+			(xy 203.2 154.94) (xy 208.28 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc27676b-9e5b-501b-8fae-3b2792723eec")
+	)
+	(wire
+		(pts
+			(xy 203.2 111.76) (xy 208.28 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "feabfe40-dc3f-556f-9c2c-273ee4c33d98")
+	)
+	(label "HOST_GPIO14"
+		(at 43.18 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0c85103a-8e8c-52b3-a0cf-1dd1b207c244")
+	)
+	(label "H2_IO0"
+		(at 259.08 134.62 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0d5d1b65-5219-53c7-9a22-7b9a71c2bd12")
+	)
+	(label "H2_IO9"
+		(at 246.38 54.61 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0e59ddbf-8c8f-5295-9772-8a6864ba001c")
+	)
+	(label "H2_RXD0"
+		(at 227.33 121.92 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "18c1b1ab-3d80-5094-9ef0-2c37b4e30ac7")
+	)
+	(label "H2_IO10"
+		(at 69.85 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1c1adf2c-1c96-52f0-9696-93f694cf849f")
+	)
+	(label "H2_IO13"
+		(at 208.28 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2029ce8b-83ff-5415-8a6e-6c3d5ab93031")
+	)
+	(label "H2_IO26"
+		(at 208.28 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "206d6128-b94b-5bd1-b0e1-174a147b1b5a")
+	)
+	(label "HOST_GPIO13"
+		(at 114.3 166.37 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "21ef9d4d-3757-5b8e-998a-6a0f2dc155b5")
+	)
+	(label "EN"
+		(at 227.33 134.62 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2685e48e-8e39-5913-8f27-9fb28a8d01f0")
+	)
+	(label "H2_IO9"
+		(at 208.28 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c62d5cf-0303-55b3-a80b-61c98622cfce")
+	)
+	(label "EN"
+		(at 88.9 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2de568da-380f-59d9-aa65-cd6dd9537492")
+	)
+	(label "H2_IO9"
+		(at 227.33 147.32 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2fdd87d9-97bd-551a-bebf-2a34bd63383c")
+	)
+	(label "H2_IO2"
+		(at 208.28 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3247268c-d6ac-51dd-8e9b-7c5a55f0ced9")
+	)
+	(label "H2_IO14"
+		(at 208.28 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3544133e-dd74-5d24-b6d5-d100297e9b08")
+	)
+	(label "HOST_GPIO4"
+		(at 139.7 166.37 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3552b5e3-a9af-5e2e-8d7d-c90c2bc593e5")
+	)
+	(label "H2_IO13"
+		(at 69.85 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3adb6c7c-51f5-5e2e-918e-ac53549c45f1")
+	)
+	(label "HOST_GPIO12"
+		(at 43.18 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "48fb96d7-937a-5f0b-a7de-c54157785adf")
+	)
+	(label "H2_IO11"
+		(at 69.85 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "49cf96b7-f24f-5725-aa18-544296dcd69e")
+	)
+	(label "H2_IO25"
+		(at 208.28 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4ad27120-bea5-5d1b-8cfe-62eac8f9279a")
+	)
+	(label "H2_IO27"
+		(at 208.28 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "50d61c99-13b3-54eb-999b-7bd727859037")
+	)
+	(label "H2_IO1"
+		(at 208.28 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "52aa9a3c-540b-5068-8b6a-03f6aadbb59a")
+	)
+	(label "H2_IO25"
+		(at 261.62 54.61 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5cb6c873-8f86-5b4a-8e9e-271bf9bf61cd")
+	)
+	(label "H2_IO11"
+		(at 208.28 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "65178c55-55c3-51f0-ace1-0f93dd5fbb5d")
+	)
+	(label "H2_IO0"
+		(at 208.28 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6732ae68-618f-5429-9bc6-23ba380cc087")
+	)
+	(label "EN"
+		(at 142.24 114.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "68b901d4-bafe-5e01-a547-7ef4be00204a")
+	)
+	(label "H2_IO8"
+		(at 231.14 54.61 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "68ed379e-aa3f-5622-9d62-29bd6ca16913")
+	)
+	(label "H2_IO10"
+		(at 208.28 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6ad533fb-0356-58f9-98e3-ec01f90f32e3")
+	)
+	(label "H2_IO1"
+		(at 259.08 147.32 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "75b059ce-da48-5515-8f66-fbc69c798f05")
+	)
+	(label "H2_RXD0"
+		(at 208.28 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c950e1b-5e69-5a0a-910a-505e9e86a097")
+	)
+	(label "HOST_GPIO5"
+		(at 127 166.37 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "82896100-92ef-51b2-8479-86adcd7a6bf8")
+	)
+	(label "H2_IO5"
+		(at 259.08 198.12 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "884e8070-9b40-5fdf-9012-25d75dd3b33d")
+	)
+	(label "H2_IO12"
+		(at 69.85 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "925374a3-e781-519b-b5a6-598b851bf235")
+	)
+	(label "HOST_GPIO4"
+		(at 43.18 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9363e49b-1fcd-53e9-9acb-47a2ea84de01")
+	)
+	(label "H2_IO3"
+		(at 208.28 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "93f92f9d-d0cf-5c99-a306-72ea89a65db2")
+	)
+	(label "H2_IO4"
+		(at 259.08 185.42 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9981d709-69b9-5fcc-8a50-a100b308d1eb")
+	)
+	(label "H2_TXD0"
+		(at 227.33 109.22 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "998cb760-5ff3-56d9-a64f-7f57db8142fd")
+	)
+	(label "H2_IO3"
+		(at 259.08 172.72 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "99946a8a-5458-5cdf-89aa-84322babe710")
+	)
+	(label "H2_IO2"
+		(at 259.08 160.02 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9bd8b88b-55c0-5e0a-8ec4-78367e0532f7")
+	)
+	(label "HOST_GPIO13"
+		(at 43.18 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9bdfdc64-6900-5f40-be2c-c49c93599c7c")
+	)
+	(label "H2_TXD0"
+		(at 208.28 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9e203c30-322e-575c-80af-bb7b1cb7cabd")
+	)
+	(label "H2_IO26"
+		(at 259.08 109.22 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a1fbb1cf-0b53-550d-814a-5619769bd1d2")
+	)
+	(label "H2_IO22"
+		(at 208.28 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a9d10107-1ea6-5a27-ad42-bec81ca403ef")
+	)
+	(label "H2_IO4"
+		(at 208.28 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7b5a1ba-f935-5782-a934-b0bab6738e47")
+	)
+	(label "HOST_GPIO5"
+		(at 43.18 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8e03946-f3c5-5d1d-b1b3-863d6be5e425")
+	)
+	(label "HOST_GPIO12"
+		(at 101.6 166.37 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ba47be23-4726-5cdf-ba97-9030cac9a138")
+	)
+	(label "H2_IO5"
+		(at 208.28 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ca4454de-e3a6-5df1-9601-824aab2d06b1")
+	)
+	(label "H2_IO14"
+		(at 69.85 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d124deb2-12f8-5b55-bbbd-9f2e31b99b79")
+	)
+	(label "H2_IO22"
+		(at 227.33 160.02 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d69b24a1-3436-5c0d-aad8-44d886f991b7")
+	)
+	(label "H2_IO27"
+		(at 259.08 121.92 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d82a234a-6a1b-5ae5-a9ac-a6033027015c")
+	)
+	(label "HOST_GPIO14"
+		(at 88.9 166.37 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e5cc4003-019c-5a70-8863-f01f00f567c4")
+	)
+	(label "H2_IO12"
+		(at 208.28 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f910c592-6411-5801-9a97-e8cef9d8fab1")
+	)
+	(label "H2_IO8"
+		(at 208.28 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd2a900e-c195-5c8c-8493-4882256bbfe7")
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 76.2 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "018ec9f4-835a-51b4-a80c-a120d2c30c33")
+		(property "Reference" "R1"
+			(at 78.74 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 78.74 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 76.2 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 76.2 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2fe97d79-435c-5874-bf2c-4ac7630017f6")
+		)
+		(pin "2"
+			(uuid "06b859e2-94e4-504d-89f5-1bf13bdacd84")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 259.08 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "05439fb2-0df4-5a38-861c-e368f96c65eb")
+		(property "Reference" "TP10"
+			(at 260.35 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GPIO0"
+			(at 260.35 127.635 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 259.08 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face pad: GPIO0"
+			(at 259.08 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "89f8c99d-114f-56b7-9ddf-f9118a2e5c3a")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 227.33 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0a86e0a2-2412-520e-a9a1-aa3c33c24df4")
+		(property "Reference" "TP5"
+			(at 228.6 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IO2"
+			(at 228.6 153.035 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 227.33 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face rear pad: IO2"
+			(at 227.33 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5e765228-f539-51dc-b4ad-00197948b781")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 88.9 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0dd30774-d968-54d2-aaa2-5104ebed67ce")
+		(property "Reference" "#PWR16"
+			(at 91.44 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "067f4ecc-670c-52f2-96e9-c2ca832df4e5")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:+3V3")
+		(at 30.48 41.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "103b30e6-b27a-5dd3-9116-e106de3e169a")
+		(property "Reference" "#PWR05"
+			(at 33.02 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 33.02 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "489224a7-b259-5ef1-b6e1-3cf8fb5eb558")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 259.08 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "149aafaf-0ed5-5bdb-a162-5c4a63faef69")
+		(property "Reference" "TP12"
+			(at 260.35 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GPIO2 STRAP"
+			(at 260.35 153.035 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 259.08 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face pad: GPIO2 - ADC1_CH1 and a BOOT-MODE STRAPPING PIN (GPIO_STRAP_REG bit 0). Do not hang a load, a pull or a driven signal on this pad."
+			(at 259.08 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bf35dfa4-435c-5ff9-a506-eaeacb733896")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:+3V3")
+		(at 261.62 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "16af1e35-3f07-50b4-b4f6-cbac2459008f")
+		(property "Reference" "#PWR15"
+			(at 264.16 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 264.16 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.62 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.62 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e489b485-2b32-5ded-a327-aab1ef0f8db7")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 227.33 172.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1743df1f-9fe2-5275-9003-abed3f4368b3")
+		(property "Reference" "#PWR21"
+			(at 229.87 171.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 229.87 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.33 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3acbf116-2445-5531-8218-a34faf6180f9")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 246.38 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "175985cf-8d45-5c39-a381-500433abfdfc")
+		(property "Reference" "R3"
+			(at 248.92 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 248.92 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 246.38 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 246.38 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "35d41ed7-f7f5-5348-9235-c0c9a2902c41")
+		)
+		(pin "2"
+			(uuid "758e221e-8ca2-5896-b89d-550c48ad0c4d")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 101.6 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1bd64aad-9779-5171-8978-ce73f0396fe1")
+		(property "Reference" "#PWR17"
+			(at 104.14 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 104.14 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "149fe450-4fbe-57b1-8f68-963c7913bed8")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 127 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1d730653-4941-54b7-9179-c8efc6f1f490")
+		(property "Reference" "#PWR19"
+			(at 129.54 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 129.54 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 127 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a0328404-bc38-5852-bcd5-0b10ec4270eb")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:+3V3")
+		(at 231.14 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1e6c0383-bb21-5c7e-b283-23ead46e765b")
+		(property "Reference" "#PWR13"
+			(at 233.68 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 233.68 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 231.14 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4424cdde-9b29-57f6-b364-88fa5ca7deda")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 259.08 170.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "20919485-b4c5-5d6b-9e5a-495b6f04c754")
+		(property "Reference" "TP13"
+			(at 260.35 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GPIO3 STRAP"
+			(at 260.35 165.735 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 259.08 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face pad: GPIO3 - ADC1_CH2 and a BOOT-MODE STRAPPING PIN (GPIO_STRAP_REG bit 1). Do not hang a load, a pull or a driven signal on this pad."
+			(at 259.08 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a4fabae-2776-5d7a-b41d-9d384052ae81")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 114.3 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "241fbcb1-add6-5e72-94e5-e75b227b636c")
+		(property "Reference" "#PWR18"
+			(at 116.84 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 116.84 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 114.3 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9de8ccf1-d18d-532e-9c44-40b84a659d95")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 139.7 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "281d72ca-e40a-579e-ae9e-aade40c7d9ab")
+		(property "Reference" "#PWR20"
+			(at 142.24 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "95d6380b-93cf-5b37-8134-40a6d3c56fad")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 259.08 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "294353c6-e20e-5aa5-b206-13c1287cda1d")
+		(property "Reference" "TP8"
+			(at 260.35 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "USB_D-"
+			(at 260.35 102.235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 259.08 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face pad: USB_D-"
+			(at 259.08 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "45d14d34-7447-5595-b573-dc5559bdb030")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:+3V3")
+		(at 55.88 41.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3ba8167f-26b6-5e65-aac0-f9be52f7bcf8")
+		(property "Reference" "#PWR09"
+			(at 58.42 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 58.42 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4d44742b-8327-5e74-b8ed-445445b1501f")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:+3V3")
+		(at 246.38 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3d446361-4987-5d42-a84f-37ac4ec21e4b")
+		(property "Reference" "#PWR14"
+			(at 248.92 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 248.92 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 246.38 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "54d73a9f-a64b-5fc7-9e4a-669cd29d26ff")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 227.33 182.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "494569ae-be7f-5d63-bfde-60c56b1d1b51")
+		(property "Reference" "TP7"
+			(at 228.6 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 228.6 178.435 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 227.33 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face rear pad: GND"
+			(at 227.33 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44b939fe-5a45-50df-a5e2-0c1fac70e971")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 227.33 170.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4ab14d60-89ef-5dc9-8794-09596cd77d43")
+		(property "Reference" "TP6"
+			(at 228.6 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 228.6 165.735 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 227.33 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face rear pad: GND"
+			(at 227.33 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cceda77d-a898-5f4c-a7d2-b0359ddf6bf3")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 259.08 182.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4e511ef9-e49f-5e5a-a31a-34dfc10ac530")
+		(property "Reference" "TP14"
+			(at 260.35 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GPIO4"
+			(at 260.35 178.435 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 259.08 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face pad: GPIO4 - ADC1_CH3, MTCK. Carries a weak internal pull-up after reset on every factory part; treat as driven until firmware runs."
+			(at 259.08 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "18d06ef6-3647-5714-ae7e-05009c7353bc")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:C")
+		(at 43.18 50.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5049100a-f6bf-5cfd-9343-c05484976d1a")
+		(property "Reference" "C3"
+			(at 45.085 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 45.085 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 43.18 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.18 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c744f113-ab2d-5471-9f21-c11d8e746aaf")
+		)
+		(pin "2"
+			(uuid "ce09ebb2-2b77-5991-93b0-8207891aab49")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:C")
+		(at 55.88 50.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5236f0a0-bcc0-5fee-8b2e-a9b30e83d9e9")
+		(property "Reference" "C4"
+			(at 57.785 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22uF"
+			(at 57.785 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 55.88 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ce493e45-9f2e-59ad-9428-7601d4d0abe8")
+		)
+		(pin "2"
+			(uuid "f8e83908-c0f6-5544-ba57-b754cd342c8c")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:ESP32-H2-MINI-1-H4S")
+		(at 177.8 149.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "523ac232-3164-5941-9c28-8e48dd10bf55")
+		(property "Reference" "U1"
+			(at 157.48 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESP32-H2-MINI-1-H4S"
+			(at 157.48 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TYWE2L-2-THREAD:ESP32-H2-MINI-1"
+			(at 177.8 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "0d5c8206-6ca7-5c00-8eeb-18571e09edf8")
+		)
+		(pin "15"
+			(uuid "ae9a556c-4f4c-5f58-aced-34d0d58adc81")
+		)
+		(pin "8"
+			(uuid "df6b1544-bc1e-5099-809e-7f4e7a80665c")
+		)
+		(pin "1"
+			(uuid "c21f7c80-ef98-5b8f-bd58-6039a148b0fe")
+		)
+		(pin "2"
+			(uuid "581dbab8-a79f-5c7e-9d29-4a876fac728f")
+		)
+		(pin "11"
+			(uuid "5890db55-975d-5a1d-a52b-00e9845e591f")
+		)
+		(pin "14"
+			(uuid "c1a3775e-3cf7-51d4-b313-7c8c62970793")
+		)
+		(pin "36"
+			(uuid "cd006e14-2af2-5b5d-b744-205dad182af3")
+		)
+		(pin "37"
+			(uuid "33c17a32-0f4c-5ca1-97ef-f1617ca0f163")
+		)
+		(pin "38"
+			(uuid "3f0a28f8-cf99-5627-9e98-21d9a65a951c")
+		)
+		(pin "39"
+			(uuid "a7bb518c-3bd8-53b6-ba92-348f5a33fe45")
+		)
+		(pin "40"
+			(uuid "3a61a35b-f2e8-5bf7-8672-a014753cc051")
+		)
+		(pin "41"
+			(uuid "865e309a-0bd7-58e8-964c-1f07ec9ea602")
+		)
+		(pin "42"
+			(uuid "593959eb-a900-5841-a0d7-825df71a4299")
+		)
+		(pin "43"
+			(uuid "80b01c90-14ff-5db2-b1e5-d29fb1b6c12b")
+		)
+		(pin "44"
+			(uuid "029b4e38-0c55-50d6-a947-81c501c00293")
+		)
+		(pin "45"
+			(uuid "bbb61a20-c7db-5c0c-b6ba-08cc0d720bdb")
+		)
+		(pin "46"
+			(uuid "c0f18f5a-a637-5e77-8239-a0f63b0444f4")
+		)
+		(pin "47"
+			(uuid "f7129648-60a4-546f-9e8b-e28c30805b1b")
+		)
+		(pin "48"
+			(uuid "7e76be53-445b-589e-860a-1f8c659023c9")
+		)
+		(pin "49"
+			(uuid "0a2f1f47-726a-5c35-b1d4-08ff87c1a358")
+		)
+		(pin "50"
+			(uuid "00b57fdb-cdcd-50a8-b2d7-039cb4587c3b")
+		)
+		(pin "51"
+			(uuid "33d6cf32-a7b8-5ea4-998c-135626c117d8")
+		)
+		(pin "52"
+			(uuid "7a9d65c9-2de7-5984-a36a-736027e9abf8")
+		)
+		(pin "53"
+			(uuid "93f27812-fc6f-50a2-b318-d2be62f414b0")
+		)
+		(pin "10"
+			(uuid "a0f7c8c7-6b65-5428-8d59-ceae249e2c53")
+		)
+		(pin "5"
+			(uuid "a0e04795-e62a-5337-93f2-78d5e1831d5e")
+		)
+		(pin "6"
+			(uuid "778b39f0-db6a-5d5b-accc-fc6235ffc583")
+		)
+		(pin "18"
+			(uuid "4acf663d-01fb-54a7-ba9e-bd84ac1767a4")
+		)
+		(pin "19"
+			(uuid "61299630-07b8-541f-a12f-a4781ac4ac22")
+		)
+		(pin "31"
+			(uuid "9f0b182b-20b0-5d3d-bfda-62e587771c18")
+		)
+		(pin "30"
+			(uuid "10575cd5-9520-5339-9f3e-982a2f6cd4ec")
+		)
+		(pin "26"
+			(uuid "5d3ae436-8af5-532f-bd43-d766581310fa")
+		)
+		(pin "27"
+			(uuid "ba9e0081-31e8-55aa-b42c-5862d33fe161")
+		)
+		(pin "22"
+			(uuid "2269e6e9-0c95-5267-8024-c5bb1e390b89")
+		)
+		(pin "23"
+			(uuid "12a1425a-c106-5329-ac84-71937bc56ffd")
+		)
+		(pin "25"
+			(uuid "ff965eba-8df0-51d1-bdf2-e877b0d81595")
+		)
+		(pin "9"
+			(uuid "e6f29d56-70ce-5844-bc2f-a4cfd13bd33b")
+		)
+		(pin "20"
+			(uuid "7bd19555-b3f2-534a-9322-d9d91a5a0949")
+		)
+		(pin "21"
+			(uuid "360f96c0-614b-5549-a75e-d02942409059")
+		)
+		(pin "16"
+			(uuid "2152a890-afdb-5439-94fb-82edc7cd08d2")
+		)
+		(pin "12"
+			(uuid "bf742b6d-ffad-5ed5-a349-50733c6fe570")
+		)
+		(pin "13"
+			(uuid "81b8f64c-2783-52cb-9eaa-1d626f78384c")
+		)
+		(pin "24"
+			(uuid "370bea7b-7478-5d09-a67a-7aa943cf912a")
+		)
+		(pin "4"
+			(uuid "03a20404-74dd-55cb-a07c-f54c3e917220")
+		)
+		(pin "7"
+			(uuid "e7434490-1edd-5fe1-8a70-4cea676574c7")
+		)
+		(pin "17"
+			(uuid "e4d200b8-5e6b-5218-8567-769b80790337")
+		)
+		(pin "28"
+			(uuid "bc8e91ac-3c0f-547b-a528-ff77af634334")
+		)
+		(pin "29"
+			(uuid "617305d5-0a26-56c4-a3fc-309f8d9d2006")
+		)
+		(pin "32"
+			(uuid "fe3bb1ed-9f6c-5d23-9b77-39bf50c892cf")
+		)
+		(pin "33"
+			(uuid "05dda42a-903c-54c1-b955-21b62306626a")
+		)
+		(pin "34"
+			(uuid "f56d5e26-6fb5-5998-b6b7-fef4fad5600c")
+		)
+		(pin "35"
+			(uuid "455f3560-6865-5395-a04e-4dee846bc67d")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 43.18 59.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "527ec295-a8bb-5e30-8e27-722a29cb3bcb")
+		(property "Reference" "#PWR08"
+			(at 45.72 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 45.72 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.18 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a8f8f72e-5628-5465-a45a-53ad5306ab5d")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 101.6 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "529581ad-0124-556c-a2b4-f0a733a03b25")
+		(property "Reference" "R21"
+			(at 104.14 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 104.14 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 101.6 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "DNP by default. Optional insurance: fit 10k to hold this host line low through reset where an unknown host circuit dislikes an open line. Under pin mapping v2 no host line sits on GPIO4, so this is no longer a mitigation for the MTCK reset-time pull-up. All five v2 host pins are reset code 0: no drive, no pull."
+			(at 101.6 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "01434848-46d2-504b-b8e7-3d868c8b01c4")
+		)
+		(pin "2"
+			(uuid "18f0b70f-40cc-57f8-8883-5159ea4d965d")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 127 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "59629bd0-2d20-58fe-b7cd-0b5e5fd99a53")
+		(property "Reference" "R23"
+			(at 129.54 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 129.54 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 127 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 127 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "DNP by default. Optional insurance: fit 10k to hold this host line low through reset where an unknown host circuit dislikes an open line. Under pin mapping v2 no host line sits on GPIO4, so this is no longer a mitigation for the MTCK reset-time pull-up. All five v2 host pins are reset code 0: no drive, no pull."
+			(at 127 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6d4ee66e-3ca2-5b1b-b6a7-84babf4fe116")
+		)
+		(pin "2"
+			(uuid "229177ce-e3b0-5a43-a97a-ae328efd842f")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 114.3 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "5e46d85b-a008-502c-b603-ce005b95c134")
+		(property "Reference" "R22"
+			(at 116.84 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 116.84 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 114.3 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 114.3 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "DNP by default. Optional insurance: fit 10k to hold this host line low through reset where an unknown host circuit dislikes an open line. Under pin mapping v2 no host line sits on GPIO4, so this is no longer a mitigation for the MTCK reset-time pull-up. All five v2 host pins are reset code 0: no drive, no pull."
+			(at 114.3 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d5f70f5e-8269-51ce-bda8-d7d64c2fdd12")
+		)
+		(pin "2"
+			(uuid "a9cefb55-3a9c-53e6-8e9d-2a80125e787a")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:+3V3")
+		(at 45.72 160.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "62f5c498-c2ab-5ee1-ad2b-7ee56a73bea7")
+		(property "Reference" "#PWR04"
+			(at 48.26 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 48.26 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e4a18a1b-4305-5566-bab5-e85ffa8a71ca")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 63.5 129.54 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "63851a30-a7ba-5ea6-97d6-5fdb322547e2")
+		(property "Reference" "R12"
+			(at 62.23 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0R"
+			(at 62.23 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 63.5 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "FITTED 0 ohm link. Optional: remove to isolate this host net during bring-up."
+			(at 63.5 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44078290-1b66-5391-bf7e-47da32230d95")
+		)
+		(pin "2"
+			(uuid "573a2fd8-dba9-52ce-aa4e-494c735d283f")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 139.7 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "6f811659-1192-5af7-8ed2-2cb15c2a8b55")
+		(property "Reference" "R24"
+			(at 142.24 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 142.24 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 139.7 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "DNP by default. Optional insurance: fit 10k to hold this host line low through reset where an unknown host circuit dislikes an open line. Under pin mapping v2 no host line sits on GPIO4, so this is no longer a mitigation for the MTCK reset-time pull-up. All five v2 host pins are reset code 0: no drive, no pull."
+			(at 139.7 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8bcf8868-b2f7-5f8f-b1e5-95ade68509b7")
+		)
+		(pin "2"
+			(uuid "8dd7880d-1c01-5b8c-8033-5fc53f0a4edd")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 227.33 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "73d5170a-c9a7-5571-94a0-a338c1a6b15a")
+		(property "Reference" "TP2"
+			(at 228.6 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "RX"
+			(at 228.6 114.935 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 227.33 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face rear pad: RX"
+			(at 227.33 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3e7ba9eb-5bdc-5f66-a62b-81636c6d1539")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 227.33 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7cf92492-6b20-5f33-8f1b-23cbef5f62b8")
+		(property "Reference" "TP1"
+			(at 228.6 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TX"
+			(at 228.6 102.235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 227.33 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face rear pad: TX"
+			(at 227.33 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9c2d6593-f35b-5873-9796-c4b3a7d1533a")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 231.14 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7dbf2f7c-6d5c-557e-ab67-c12978f6332e")
+		(property "Reference" "R2"
+			(at 233.68 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 233.68 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 231.14 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 231.14 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "13a9c41c-ff3f-5e65-86e9-b05c87088134")
+		)
+		(pin "2"
+			(uuid "d64b3166-072f-5f31-8444-68916300d42c")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:+3V3")
+		(at 43.18 41.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "813de08d-bdd4-5ec9-b693-ac14aa94891b")
+		(property "Reference" "#PWR07"
+			(at 45.72 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 45.72 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.18 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "22c9d519-110e-5aa7-b67f-5641db9f7ef3")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 261.62 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "86c90b98-2bba-5d51-b02b-c14ea6c195ef")
+		(property "Reference" "R4"
+			(at 264.16 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 264.16 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 261.62 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.62 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f89bbbe3-a317-5e51-8ce0-3160300453b0")
+		)
+		(pin "2"
+			(uuid "4447abc7-bbde-5ecf-87e5-910e742d38a9")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 63.5 144.78 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "91819ad2-cb96-559f-ac3f-317bc1f3fb9c")
+		(property "Reference" "R14"
+			(at 62.23 139.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0R"
+			(at 62.23 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 63.5 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "FITTED 0 ohm link. Optional: remove to isolate this host net during bring-up."
+			(at 63.5 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1d6718a4-6d77-539f-80ae-e8ec5691d6de")
+		)
+		(pin "2"
+			(uuid "5f9250ab-8c60-5ad2-9931-865505e69a55")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 227.33 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "99c29bed-e744-56be-b00e-22d2fe1c7022")
+		(property "Reference" "TP4"
+			(at 228.6 138.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IO0"
+			(at 228.6 140.335 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 227.33 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face rear pad: IO0"
+			(at 227.33 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ed8d769a-f413-5de3-b9e0-e5e7498f96ac")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:+3V3")
+		(at 76.2 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9eb33aa6-1eb9-5f8b-9925-2e8062a5789b")
+		(property "Reference" "#PWR11"
+			(at 78.74 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 78.74 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 76.2 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f20de5fb-308b-585c-ae8e-a2eab6e4b821")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TYWE2L_Host_Legs_7P")
+		(at 30.48 137.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a07f1e29-56f9-52d0-aca2-dca53e9e2fb7")
+		(property "Reference" "J1"
+			(at 17.78 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TYWE2L host legs"
+			(at 17.78 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TYWE2L-2-THREAD:TYWE2L_Legs_7P_2.0mm"
+			(at 30.48 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "7 formed legs, 2.0 mm pitch. Pin 1 = leftmost leg viewed from the front face."
+			(at 30.48 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ade7ebdb-e8c5-5270-8c89-1e9493e70b8f")
+		)
+		(pin "2"
+			(uuid "3455bdbf-01f7-5a99-86b5-7425af2c53cc")
+		)
+		(pin "3"
+			(uuid "e30ced33-73f9-5524-9e7f-77f4891e5c50")
+		)
+		(pin "4"
+			(uuid "4833116a-7bf5-591f-8190-4232113bf77e")
+		)
+		(pin "5"
+			(uuid "ffa12e07-d7d3-5a2a-a6bb-6a5913c176c5")
+		)
+		(pin "6"
+			(uuid "da715100-33cf-57fe-add4-fb6792132b48")
+		)
+		(pin "7"
+			(uuid "82b1d3a8-f3ae-5af7-acca-e18d78c8633a")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 63.5 121.92 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a0dc0147-659d-503d-a21d-ae715c21d219")
+		(property "Reference" "R11"
+			(at 62.23 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0R"
+			(at 62.23 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 63.5 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "FITTED 0 ohm link. Optional: remove to isolate this host net during bring-up."
+			(at 63.5 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2ab25662-dd07-57d5-97f9-ac1f1d2b9b00")
+		)
+		(pin "2"
+			(uuid "eb302a37-3b56-5a40-a653-c6997d6767ba")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:C")
+		(at 30.48 50.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a570a731-9ed8-500e-8f03-27c5474b518e")
+		(property "Reference" "C2"
+			(at 32.385 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 32.385 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 30.48 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6a422224-41cf-5517-b258-03f63df1b6d3")
+		)
+		(pin "2"
+			(uuid "5433917b-8c0d-53af-b1b9-14ebdd1f5021")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 45.72 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ab1031b3-6f1a-512e-8075-82db3a53af45")
+		(property "Reference" "#PWR03"
+			(at 48.26 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "84385c0a-0325-5483-8680-af9ffa9d88e2")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 259.08 195.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b0637a84-0870-503e-ad1f-fa2dc6356a85")
+		(property "Reference" "TP15"
+			(at 260.35 189.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GPIO5"
+			(at 260.35 191.135 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 259.08 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face pad: GPIO5 - ADC1_CH4, MTDI. ADC1_CH4 is inoperative on chip revisions v0.0 and v0.1 (erratum ADC-7227), fixed in v1.2."
+			(at 259.08 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7847c83-882b-5965-b201-ea50927d5f23")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:C")
+		(at 76.2 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b21fde93-fa57-525e-a688-661f5fb26c60")
+		(property "Reference" "C1"
+			(at 78.74 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 78.74 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 76.2 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 76.2 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "EN power-up RC delay capacitor. Espressif reference value: R = 10k with C = 1 uF, ESP32-H2-MINI-1 datasheet v1.6 p.34."
+			(at 76.2 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6eb8cb5e-47cf-5316-84e0-f3609698fbf9")
+		)
+		(pin "2"
+			(uuid "1a1a6d36-6443-5e85-b345-20723e2f7848")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 147.32 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bbc0fb1b-9571-529d-9e64-3ca79edef0c2")
+		(property "Reference" "#PWR02"
+			(at 149.86 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 177.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8052170f-9d6c-54a3-8b0d-57d894204336")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 63.5 114.3 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c7cfeb48-de76-59e3-b252-7fe768e2f494")
+		(property "Reference" "R10"
+			(at 62.23 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0R"
+			(at 62.23 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 63.5 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "FITTED 0 ohm link. Optional: remove to isolate this host net during bring-up."
+			(at 63.5 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e9f7bc31-2c28-5961-aad0-a137d4066d81")
+		)
+		(pin "2"
+			(uuid "eddb7543-6be0-5554-94a1-e529eb10a55d")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 259.08 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c832d3eb-05f3-5b5c-b5d2-9ff85ae2adda")
+		(property "Reference" "TP9"
+			(at 260.35 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "USB_D+"
+			(at 260.35 114.935 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 259.08 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face pad: USB_D+"
+			(at 259.08 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9f6ac2a3-c5af-5ac4-80db-b4782ce8cd1e")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:+3V3")
+		(at 147.32 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ca8b3657-db5c-5de3-9c08-58b23ccc9b9b")
+		(property "Reference" "#PWR01"
+			(at 149.86 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 149.86 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "99297eb9-5270-5c3b-8c3c-a37d44dd7d9d")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 227.33 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d0c6fb9a-7188-5350-822e-a98f14c8d035")
+		(property "Reference" "TP3"
+			(at 228.6 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "RST"
+			(at 228.6 127.635 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 227.33 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face rear pad: RST"
+			(at 227.33 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6ca06a42-c39e-5655-bafe-fd42ca5627b1")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 55.88 59.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d1a27fe3-d60a-5c96-a7a5-a869476deac5")
+		(property "Reference" "#PWR10"
+			(at 58.42 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 58.42 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "219c0a49-fb9b-5844-ab0c-1a1bc15047cc")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:TestPoint")
+		(at 259.08 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d5662327-d3fa-551c-a305-dd79dfa357a7")
+		(property "Reference" "TP11"
+			(at 260.35 138.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GPIO1"
+			(at 260.35 140.335 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 259.08 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "Rear-face pad: GPIO1 - ADC1_CH0. Freed by pin mapping v2."
+			(at 259.08 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c6936d5c-c248-54c7-b5cf-ac97f50a470f")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 63.5 137.16 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d7a3cec4-1673-5994-ab63-abaae41a0826")
+		(property "Reference" "R13"
+			(at 62.23 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0R"
+			(at 62.23 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 63.5 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "FITTED 0 ohm link. Optional: remove to isolate this host net during bring-up."
+			(at 63.5 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5cc136b0-964c-528f-9c43-1df2a9a7cead")
+		)
+		(pin "2"
+			(uuid "2794d24a-691c-5c41-977c-0fc74d072926")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 30.48 59.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e763ebf4-7b88-5503-8db7-b0e86c97c90b")
+		(property "Reference" "#PWR06"
+			(at 33.02 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 33.02 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "366c49a7-88e8-5e73-85f4-2cc8f162f9b3")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:R")
+		(at 88.9 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "eae00033-9754-59c3-949a-3b98a174e482")
+		(property "Reference" "R20"
+			(at 91.44 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 91.44 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 88.9 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "DNP by default. Optional insurance: fit 10k to hold this host line low through reset where an unknown host circuit dislikes an open line. Under pin mapping v2 no host line sits on GPIO4, so this is no longer a mitigation for the MTCK reset-time pull-up. All five v2 host pins are reset code 0: no drive, no pull."
+			(at 88.9 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b72ef926-9bed-5734-9264-95d95122a745")
+		)
+		(pin "2"
+			(uuid "310f7342-74ec-5751-9afa-60c28edff48c")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 227.33 185.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ebfef36a-183e-5c8e-a867-86098fd02025")
+		(property "Reference" "#PWR22"
+			(at 229.87 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 229.87 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.33 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d24a2b5b-d35d-525c-a8fd-1c15c551db3c")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TYWE2L-2-THREAD:GND")
+		(at 76.2 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f4c4ae56-9de9-5101-81d3-f501b3ec0fbb")
+		(property "Reference" "#PWR12"
+			(at 78.74 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 78.74 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 76.2 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "46a54bb5-b697-5070-b7e2-a3feab607bc3")
+		)
+		(instances
+			(project "tywe2l-h2-carrier"
+				(path "/f45f6981-5665-59e6-8622-f201f534b595"
+					(reference "#PWR12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

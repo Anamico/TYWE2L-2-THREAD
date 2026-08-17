@@ -1,0 +1,711 @@
+<title>TYWE2L-2-THREAD Carrier</title>
+<style>
+:root{
+  --bg:#ffffff;
+  --panel:#f6f7f8;
+  --ink:#14171c;
+  --ink-2:#565c66;
+  --ink-3:#868d97;
+  --rule:#d5d8dd;
+  --wire:#2a2e35;
+  --comp-fill:#ffffff;
+  --accent:#0a5aa8;
+  --accent-bg:#e7f0fa;
+  --warn:#a2381c;
+  --warn-bg:#fbeae4;
+  --dnp:#7c828b;
+  --strap:#8a5300;
+  --strap-bg:#fbf0dc;
+  --pad:#3c424b;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#13161a;
+    --panel:#1b1f25;
+    --ink:#e9ebef;
+    --ink-2:#a6adb7;
+    --ink-3:#7d848e;
+    --rule:#323841;
+    --wire:#ced4dc;
+    --comp-fill:#13161a;
+    --accent:#6fb4f6;
+    --accent-bg:#152a3f;
+    --warn:#f08765;
+    --warn-bg:#3a1d14;
+    --dnp:#8d949d;
+    --strap:#e0ac5c;
+    --strap-bg:#382b12;
+    --pad:#b9c0c9;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#13161a;
+  --panel:#1b1f25;
+  --ink:#e9ebef;
+  --ink-2:#a6adb7;
+  --ink-3:#7d848e;
+  --rule:#323841;
+  --wire:#ced4dc;
+  --comp-fill:#13161a;
+  --accent:#6fb4f6;
+  --accent-bg:#152a3f;
+  --warn:#f08765;
+  --warn-bg:#3a1d14;
+  --dnp:#8d949d;
+  --strap:#e0ac5c;
+  --strap-bg:#382b12;
+  --pad:#b9c0c9;
+}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-text-size-adjust:100%;
+  overflow-x:hidden;
+}
+.page{max-width:1500px;margin:0 auto;padding:40px 24px 88px}
+header{border-bottom:1px solid var(--rule);padding-bottom:22px;margin-bottom:34px}
+.kicker{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+h1{font-size:29px;line-height:1.2;font-weight:650;letter-spacing:-.012em;margin:0 0 10px}
+.sub{color:var(--ink-2);font-size:15.5px;max-width:74ch;margin:0}
+h2{font-size:13px;font-weight:650;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+section{margin-top:44px}
+figure{margin:0}
+figcaption{color:var(--ink-2);font-size:13.5px;margin-top:14px;max-width:90ch}
+.scroll{overflow-x:auto;border:1px solid var(--rule);background:var(--bg);padding:14px}
+svg.sheet{display:block;width:100%;min-width:1240px;height:auto}
+svg.mech{display:block;width:100%;max-width:660px;height:auto;margin:0 auto}
+
+/* ---------- drawing: base (zero specificity so class rules always win) ---------- */
+:where(.sheet,.mech,.key) text{
+  fill:var(--ink);
+  font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:13px;
+}
+:where(.sheet,.mech,.key) :where(line,polyline,rect,circle,path){
+  fill:none;
+  vector-effect:non-scaling-stroke;
+}
+
+/* ---------- drawing: shapes ---------- */
+.w{stroke:var(--wire);stroke-width:1.6}
+.leg{stroke:var(--wire);stroke-width:4;stroke-linecap:round}
+.box{stroke:var(--wire);stroke-width:1.8;fill:var(--comp-fill)}
+.comp{stroke:var(--wire);stroke-width:1.8;fill:var(--comp-fill)}
+.panel{stroke:var(--rule);stroke-width:1.4;fill:var(--panel)}
+.xpanel{stroke:var(--accent);stroke-width:1.4;fill:var(--accent-bg)}
+.chip{stroke:var(--rule);stroke-width:1.2;fill:var(--bg)}
+.dash{stroke:var(--rule);stroke-width:1.4;stroke-dasharray:7 5;fill:none}
+.rule{stroke:var(--rule);stroke-width:1.2}
+.jn{fill:var(--wire);stroke:none}
+.pin1{fill:var(--wire);stroke:none}
+.xw{stroke:var(--accent);stroke-width:2}
+.ncx line{stroke:var(--warn);stroke-width:2.2}
+.strapdot{fill:var(--strap);stroke:none}
+.hot{stroke:var(--warn);stroke-width:2.4}
+.hotc{stroke:var(--warn);stroke-width:2.6;fill:var(--warn-bg)}
+.hotmark{fill:var(--warn);stroke:none}
+.dnpc{stroke:var(--dnp);stroke-width:1.6;stroke-dasharray:5 3.5;fill:none}
+.pad-o{stroke:var(--pad);stroke-width:1.8;fill:var(--comp-fill)}
+.pad-i{fill:var(--pad);stroke:none}
+.padstrap-o{stroke:var(--strap);stroke-width:2.2;fill:var(--strap-bg)}
+.padstrap-i{fill:var(--strap);stroke:none}
+.dim{stroke:var(--ink-3);stroke-width:1.1}
+.ext{stroke:var(--ink-3);stroke-width:.9;stroke-dasharray:3 3}
+.modbox{stroke:var(--wire);stroke-width:1.8;fill:none}
+.carbox{stroke:var(--wire);stroke-width:2.2;fill:var(--panel)}
+.mech rect.keep{fill:url(#hatch);stroke:none}
+.hatchline{stroke:var(--warn);stroke-width:1}
+.padring{stroke:var(--pad);stroke-width:1.6;fill:var(--comp-fill)}
+.padhole{stroke:var(--pad);stroke-width:1;fill:var(--bg)}
+.legline{stroke:var(--wire);stroke-width:3.4;stroke-linecap:round}
+
+/* ---------- drawing: type ---------- */
+.mono,.ref,.val,.net,.pinnum,.dimt{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.lbl{font-size:13px}
+.sm{font-size:12.5px;fill:var(--ink-2)}
+.tiny{font-size:11px;fill:var(--ink-2)}
+.h2{font-size:16.5px;font-weight:650;letter-spacing:.02em}
+.h3{font-size:13.5px;font-weight:650}
+.mono{font-size:12.5px}
+.ref{font-size:13px;font-weight:650}
+.val{font-size:12.5px;fill:var(--ink-2)}
+.net{font-size:11.5px;fill:var(--ink-2)}
+.pinnum{font-size:11.5px;fill:var(--ink-3)}
+.pinname{font-size:13px}
+.legno{font-size:15px;font-weight:650}
+.pin1t{font-size:10px;font-weight:700;fill:var(--bg)}
+.dimt{font-size:12.5px;fill:var(--ink-2)}
+
+/* ---------- drawing: emphasis, last so it always wins ---------- */
+text.em{font-weight:650}
+text.dim{fill:var(--ink-3);stroke:none}
+text.acc{fill:var(--accent)}
+text.warnt,text.hott{fill:var(--warn)}
+text.strapt{fill:var(--strap)}
+text.dnpt{fill:var(--dnp)}
+text.dnptag{fill:var(--dnp);font-size:11.5px;font-weight:650;letter-spacing:.06em}
+
+/* ---------- legend / notes ---------- */
+.keys{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px 30px}
+.keys li{display:flex;align-items:flex-start;gap:12px;font-size:13.5px;color:var(--ink-2)}
+.keys svg{flex:0 0 auto;width:52px;height:26px;margin-top:1px}
+.keys b{color:var(--ink);font-weight:600}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0;border-top:1px solid var(--rule)}
+.notes div{border-bottom:1px solid var(--rule);padding:16px 22px 16px 0}
+.notes h3{margin:0 0 6px;font-size:14px;font-weight:650;letter-spacing:.01em}
+.notes p{margin:0;font-size:13.5px;color:var(--ink-2)}
+.notes .flag{color:var(--warn)}
+.keys code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;color:var(--ink)}
+.src{margin-top:44px;padding-top:20px;border-top:1px solid var(--rule);font-size:12.5px;color:var(--ink-3);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;line-height:1.9}
+@media (max-width:640px){
+  .page{padding:26px 14px 60px}
+  h1{font-size:23px}
+  .notes div{padding-right:0}
+}
+</style>
+<div class="page">
+<header>
+  <div class="kicker">hardware / carrier / tywe2l-h2-carrier.kicad_sch</div>
+  <h1>TYWE2L-2-THREAD carrier schematic</h1>
+  <p class="sub">An ESP32-H2-MINI-1-H4S on a carrier board that drops into a Tuya TYWE2L footprint, converting a Wi-Fi Tuya device to Matter over Thread. Seven legs face the host: five GPIOs plus GND and 3V3. Drawn by hand from the KiCad source, with every net traced from the sheet rather than from the notes on it.</p>
+</header>
+
+<figure>
+  <div class="scroll"><svg class="sheet" viewBox="0 0 2420 1250" role="img" aria-label="Schematic of the TYWE2L-2-THREAD carrier: an ESP32-H2-MINI-1-H4S module U1 wired to a seven-leg TYWE2L host connector J1 through five zero ohm series links R10 to R14, with do-not-fit pull-downs R20 to R24, an EN reset RC network, three strapping pull-ups, three decoupling capacitors and fifteen rear-face test pads." xmlns="http://www.w3.org/2000/svg">
+<rect x="60" y="96" width="940" height="164" class="xpanel"/>
+<text x="82" y="124" class="h2 acc" text-anchor="start">NAMING CROSSOVER</text>
+<text x="240" y="124" class="h3" text-anchor="start">the ESP8285 leg numbers are not the ESP32-H2 pin numbers</text>
+<text x="82" y="146" class="sm" text-anchor="start">Net names keep them apart: HOST_GPIOxx is always a leg, H2_IOxx is always a module pin.</text>
+<text x="150" y="176" class="sm dim" text-anchor="middle">ESP8285 leg net</text>
+<text x="560" y="176" class="sm dim" text-anchor="middle">ESP32-H2 module pin</text>
+<rect x="96" y="187" width="108" height="20" class="chip"/>
+<text x="150" y="202" class="mono" text-anchor="middle">GPIO14</text>
+<rect x="96" y="209" width="108" height="20" class="chip"/>
+<text x="150" y="224" class="mono" text-anchor="middle">GPIO12</text>
+<rect x="96" y="231" width="108" height="20" class="chip"/>
+<text x="150" y="246" class="mono" text-anchor="middle">GPIO13</text>
+<rect x="506" y="187" width="108" height="20" class="chip"/>
+<text x="560" y="202" class="mono" text-anchor="middle">GPIO12</text>
+<rect x="506" y="209" width="108" height="20" class="chip"/>
+<text x="560" y="224" class="mono" text-anchor="middle">GPIO13</text>
+<rect x="506" y="231" width="108" height="20" class="chip"/>
+<text x="560" y="246" class="mono" text-anchor="middle">GPIO14</text>
+<line x1="204" y1="197" x2="506" y2="219" class="xw"/>
+<line x1="204" y1="219" x2="506" y2="241" class="xw"/>
+<line x1="204" y1="241" x2="506" y2="197" class="xw"/>
+<text x="636" y="200" class="sm" text-anchor="start">Legs 4 and 5 carry ESP8285 GPIO5 and GPIO4 and land on</text>
+<text x="636" y="220" class="sm" text-anchor="start">H2 GPIO10 and GPIO11, where no number is reused.</text>
+<text x="636" y="246" class="sm em" text-anchor="start">None of the five host lines is a strapping pin.</text>
+<rect x="60" y="878" width="1020" height="62" class="box"/>
+<text x="78" y="905" class="ref" text-anchor="start">J1</text>
+<text x="120" y="905" class="val" text-anchor="start">TYWE2L host legs</text>
+<text x="300" y="905" class="sm dim" text-anchor="start">7 formed legs, 2.0 mm pitch, 12.0 mm span</text>
+<line x1="120" y1="940" x2="120" y2="992" class="leg"/>
+<rect x="109" y="998" width="22" height="22" class="pin1"/>
+<text x="120" y="1015" class="pin1t" text-anchor="middle">1</text>
+<line x1="270" y1="940" x2="270" y2="992" class="leg"/>
+<text x="270" y="1016" class="legno" text-anchor="middle">2</text>
+<line x1="420" y1="940" x2="420" y2="992" class="leg"/>
+<text x="420" y="1016" class="legno" text-anchor="middle">3</text>
+<line x1="570" y1="940" x2="570" y2="992" class="leg"/>
+<text x="570" y="1016" class="legno" text-anchor="middle">4</text>
+<line x1="720" y1="940" x2="720" y2="992" class="leg"/>
+<text x="720" y="1016" class="legno" text-anchor="middle">5</text>
+<line x1="870" y1="940" x2="870" y2="992" class="leg"/>
+<text x="870" y="1016" class="legno" text-anchor="middle">6</text>
+<line x1="1020" y1="940" x2="1020" y2="992" class="leg"/>
+<text x="1020" y="1016" class="legno" text-anchor="middle">7</text>
+<text x="1094" y="905" class="sm dim" text-anchor="start">front / module face</text>
+<text x="1094" y="923" class="sm dim" text-anchor="start">pin 1 leftmost</text>
+<text x="120" y="1040" class="mono" text-anchor="middle">GPIO14</text>
+<line x1="120" y1="878" x2="120" y2="780" class="w"/>
+<line x1="120" y1="290" x2="120" y2="670" class="w"/>
+<line x1="120" y1="710" x2="120" y2="780" class="w"/>
+<rect x="109" y="670" width="22" height="40" class="comp"/>
+<line x1="120" y1="290" x2="1300" y2="290" class="w"/>
+<text x="138" y="684" class="ref" text-anchor="start">R10</text>
+<text x="138" y="702" class="val" text-anchor="start">0R</text>
+<circle cx="120" cy="780" r="4" class="jn"/>
+<line x1="120" y1="780" x2="190" y2="780" class="w"/>
+<rect x="179" y="786" width="22" height="40" class="comp dnpc"/>
+<line x1="190" y1="780" x2="190" y2="786" class="w"/>
+<line x1="190" y1="826" x2="190" y2="834" class="w"/>
+<line x1="190" y1="834" x2="190" y2="848" class="w"/>
+<line x1="175" y1="848" x2="205" y2="848" class="w"/>
+<line x1="181" y1="853" x2="199" y2="853" class="w"/>
+<line x1="186.5" y1="858" x2="193.5" y2="858" class="w"/>
+<text x="176" y="802" class="ref dnpt" text-anchor="end">R20</text>
+<text x="176" y="820" class="val dnpt" text-anchor="end">10k</text>
+<text x="176" y="838" class="dnptag" text-anchor="end">DNP</text>
+<text x="82" y="838" class="mono" text-anchor="start" transform="rotate(-90 82,838)">GPIO14</text>
+<text x="1180" y="281" class="mono" text-anchor="end">H2_IO13</text>
+<text x="270" y="1040" class="mono" text-anchor="middle">GPIO12</text>
+<line x1="270" y1="878" x2="270" y2="780" class="w"/>
+<line x1="270" y1="340" x2="270" y2="670" class="w"/>
+<line x1="270" y1="710" x2="270" y2="780" class="w"/>
+<rect x="259" y="670" width="22" height="40" class="comp"/>
+<line x1="270" y1="340" x2="1300" y2="340" class="w"/>
+<text x="288" y="684" class="ref" text-anchor="start">R11</text>
+<text x="288" y="702" class="val" text-anchor="start">0R</text>
+<circle cx="270" cy="780" r="4" class="jn"/>
+<line x1="270" y1="780" x2="340" y2="780" class="w"/>
+<rect x="329" y="786" width="22" height="40" class="comp dnpc"/>
+<line x1="340" y1="780" x2="340" y2="786" class="w"/>
+<line x1="340" y1="826" x2="340" y2="834" class="w"/>
+<line x1="340" y1="834" x2="340" y2="848" class="w"/>
+<line x1="325" y1="848" x2="355" y2="848" class="w"/>
+<line x1="331" y1="853" x2="349" y2="853" class="w"/>
+<line x1="336.5" y1="858" x2="343.5" y2="858" class="w"/>
+<text x="326" y="802" class="ref dnpt" text-anchor="end">R21</text>
+<text x="326" y="820" class="val dnpt" text-anchor="end">10k</text>
+<text x="326" y="838" class="dnptag" text-anchor="end">DNP</text>
+<text x="232" y="838" class="mono" text-anchor="start" transform="rotate(-90 232,838)">GPIO12</text>
+<text x="1180" y="331" class="mono" text-anchor="end">H2_IO14</text>
+<text x="420" y="1040" class="mono" text-anchor="middle">GPIO13</text>
+<line x1="420" y1="878" x2="420" y2="780" class="w"/>
+<line x1="420" y1="390" x2="420" y2="670" class="w"/>
+<line x1="420" y1="710" x2="420" y2="780" class="w"/>
+<rect x="409" y="670" width="22" height="40" class="comp"/>
+<line x1="420" y1="390" x2="1300" y2="390" class="w"/>
+<text x="438" y="684" class="ref" text-anchor="start">R12</text>
+<text x="438" y="702" class="val" text-anchor="start">0R</text>
+<circle cx="420" cy="780" r="4" class="jn"/>
+<line x1="420" y1="780" x2="490" y2="780" class="w"/>
+<rect x="479" y="786" width="22" height="40" class="comp dnpc"/>
+<line x1="490" y1="780" x2="490" y2="786" class="w"/>
+<line x1="490" y1="826" x2="490" y2="834" class="w"/>
+<line x1="490" y1="834" x2="490" y2="848" class="w"/>
+<line x1="475" y1="848" x2="505" y2="848" class="w"/>
+<line x1="481" y1="853" x2="499" y2="853" class="w"/>
+<line x1="486.5" y1="858" x2="493.5" y2="858" class="w"/>
+<text x="476" y="802" class="ref dnpt" text-anchor="end">R22</text>
+<text x="476" y="820" class="val dnpt" text-anchor="end">10k</text>
+<text x="476" y="838" class="dnptag" text-anchor="end">DNP</text>
+<text x="382" y="838" class="mono" text-anchor="start" transform="rotate(-90 382,838)">GPIO13</text>
+<text x="1180" y="381" class="mono" text-anchor="end">H2_IO12</text>
+<text x="570" y="1040" class="mono" text-anchor="middle">GPIO5</text>
+<line x1="570" y1="878" x2="570" y2="780" class="w"/>
+<line x1="570" y1="440" x2="570" y2="670" class="w"/>
+<line x1="570" y1="710" x2="570" y2="780" class="w"/>
+<rect x="559" y="670" width="22" height="40" class="comp"/>
+<line x1="570" y1="440" x2="1300" y2="440" class="w"/>
+<text x="588" y="684" class="ref" text-anchor="start">R13</text>
+<text x="588" y="702" class="val" text-anchor="start">0R</text>
+<circle cx="570" cy="780" r="4" class="jn"/>
+<line x1="570" y1="780" x2="640" y2="780" class="w"/>
+<rect x="629" y="786" width="22" height="40" class="comp dnpc"/>
+<line x1="640" y1="780" x2="640" y2="786" class="w"/>
+<line x1="640" y1="826" x2="640" y2="834" class="w"/>
+<line x1="640" y1="834" x2="640" y2="848" class="w"/>
+<line x1="625" y1="848" x2="655" y2="848" class="w"/>
+<line x1="631" y1="853" x2="649" y2="853" class="w"/>
+<line x1="636.5" y1="858" x2="643.5" y2="858" class="w"/>
+<text x="626" y="802" class="ref dnpt" text-anchor="end">R23</text>
+<text x="626" y="820" class="val dnpt" text-anchor="end">10k</text>
+<text x="626" y="838" class="dnptag" text-anchor="end">DNP</text>
+<text x="532" y="838" class="mono" text-anchor="start" transform="rotate(-90 532,838)">GPIO5</text>
+<text x="1180" y="431" class="mono" text-anchor="end">H2_IO10</text>
+<text x="720" y="1040" class="mono" text-anchor="middle">GPIO4</text>
+<line x1="720" y1="878" x2="720" y2="780" class="w"/>
+<line x1="720" y1="490" x2="720" y2="670" class="w"/>
+<line x1="720" y1="710" x2="720" y2="780" class="w"/>
+<rect x="709" y="670" width="22" height="40" class="comp"/>
+<line x1="720" y1="490" x2="1300" y2="490" class="w"/>
+<text x="738" y="684" class="ref" text-anchor="start">R14</text>
+<text x="738" y="702" class="val" text-anchor="start">0R</text>
+<circle cx="720" cy="780" r="4" class="jn"/>
+<line x1="720" y1="780" x2="790" y2="780" class="w"/>
+<rect x="779" y="786" width="22" height="40" class="comp dnpc"/>
+<line x1="790" y1="780" x2="790" y2="786" class="w"/>
+<line x1="790" y1="826" x2="790" y2="834" class="w"/>
+<line x1="790" y1="834" x2="790" y2="848" class="w"/>
+<line x1="775" y1="848" x2="805" y2="848" class="w"/>
+<line x1="781" y1="853" x2="799" y2="853" class="w"/>
+<line x1="786.5" y1="858" x2="793.5" y2="858" class="w"/>
+<text x="776" y="802" class="ref dnpt" text-anchor="end">R24</text>
+<text x="776" y="820" class="val dnpt" text-anchor="end">10k</text>
+<text x="776" y="838" class="dnptag" text-anchor="end">DNP</text>
+<text x="682" y="838" class="mono" text-anchor="start" transform="rotate(-90 682,838)">GPIO4</text>
+<text x="1180" y="481" class="mono" text-anchor="end">H2_IO11</text>
+<text x="1290" y="772" class="h3" text-anchor="end">FIVE HOST LINES</text>
+<text x="1290" y="798" class="sm" text-anchor="end">R10..R14 are 0R links, FITTED.</text>
+<text x="1290" y="816" class="sm" text-anchor="end">Remove one to isolate a host net.</text>
+<text x="1290" y="842" class="sm" text-anchor="end">R20..R24 are 10k pull-downs on the</text>
+<text x="1290" y="860" class="sm dnptag" text-anchor="end">host side of the links, NOT FITTED.</text>
+<polyline points="870,878 870,790 930,790 930,816" class="w"/>
+<line x1="930" y1="816" x2="930" y2="830" class="w"/>
+<line x1="915" y1="830" x2="945" y2="830" class="w"/>
+<line x1="921" y1="835" x2="939" y2="835" class="w"/>
+<line x1="926.5" y1="840" x2="933.5" y2="840" class="w"/>
+<text x="870" y="1040" class="mono" text-anchor="middle">GND</text>
+<polyline points="1020,878 1020,560 1300,560" class="w"/>
+<line x1="1020" y1="560" x2="1020" y2="544" class="w"/>
+<line x1="1006" y1="544" x2="1034" y2="544" class="w"/>
+<text x="1020" y="536" class="net" text-anchor="middle">+3V3</text>
+<text x="1020" y="1040" class="mono" text-anchor="middle">3V3</text>
+<circle cx="1020" cy="560" r="4" class="jn"/>
+<circle cx="1050" cy="560" r="4" class="jn"/>
+<line x1="1050" y1="560" x2="1050" y2="589" class="w"/>
+<line x1="1050" y1="601" x2="1050" y2="630" class="w"/>
+<line x1="1033" y1="589" x2="1067" y2="589" class="comp"/>
+<line x1="1033" y1="601" x2="1067" y2="601" class="comp"/>
+<line x1="1050" y1="630" x2="1050" y2="644" class="w"/>
+<line x1="1035" y1="644" x2="1065" y2="644" class="w"/>
+<line x1="1041" y1="649" x2="1059" y2="649" class="w"/>
+<line x1="1046.5" y1="654" x2="1053.5" y2="654" class="w"/>
+<text x="1072" y="591" class="ref" text-anchor="start">C2</text>
+<text x="1072" y="609" class="val" text-anchor="start">10uF</text>
+<circle cx="1130" cy="560" r="4" class="jn"/>
+<line x1="1130" y1="560" x2="1130" y2="589" class="w"/>
+<line x1="1130" y1="601" x2="1130" y2="630" class="w"/>
+<line x1="1113" y1="589" x2="1147" y2="589" class="comp"/>
+<line x1="1113" y1="601" x2="1147" y2="601" class="comp"/>
+<line x1="1130" y1="630" x2="1130" y2="644" class="w"/>
+<line x1="1115" y1="644" x2="1145" y2="644" class="w"/>
+<line x1="1121" y1="649" x2="1139" y2="649" class="w"/>
+<line x1="1126.5" y1="654" x2="1133.5" y2="654" class="w"/>
+<text x="1152" y="591" class="ref" text-anchor="start">C3</text>
+<text x="1152" y="609" class="val" text-anchor="start">100nF</text>
+<circle cx="1210" cy="560" r="4" class="jn"/>
+<line x1="1210" y1="560" x2="1210" y2="589" class="w"/>
+<line x1="1210" y1="601" x2="1210" y2="630" class="w"/>
+<line x1="1193" y1="589" x2="1227" y2="589" class="comp"/>
+<line x1="1193" y1="601" x2="1227" y2="601" class="comp"/>
+<line x1="1210" y1="630" x2="1210" y2="644" class="w"/>
+<line x1="1195" y1="644" x2="1225" y2="644" class="w"/>
+<line x1="1201" y1="649" x2="1219" y2="649" class="w"/>
+<line x1="1206.5" y1="654" x2="1213.5" y2="654" class="w"/>
+<text x="1232" y="591" class="ref" text-anchor="start">C4</text>
+<text x="1232" y="609" class="val" text-anchor="start">22uF</text>
+<text x="1050" y="540" class="sm dim" text-anchor="start">DECOUPLING on the module 3V3 rail</text>
+<rect x="1300" y="195" width="380" height="910" class="box"/>
+<line x1="1300" y1="250" x2="1680" y2="250" class="rule"/>
+<text x="1318" y="224" class="ref" text-anchor="start">U1</text>
+<text x="1356" y="224" class="val" text-anchor="start">ESP32-H2-MINI-1-H4S</text>
+<text x="1318" y="242" class="sm dim" text-anchor="start">802.15.4 Thread / Matter, 4 MB flash</text>
+<text x="1314" y="295" class="pinname " text-anchor="start">IO13</text>
+<text x="1290" y="282" class="pinnum" text-anchor="end">12</text>
+<text x="1314" y="345" class="pinname " text-anchor="start">IO14</text>
+<text x="1290" y="332" class="pinnum" text-anchor="end">13</text>
+<text x="1314" y="395" class="pinname " text-anchor="start">IO12</text>
+<text x="1290" y="382" class="pinnum" text-anchor="end">16</text>
+<text x="1314" y="445" class="pinname " text-anchor="start">IO10</text>
+<text x="1290" y="432" class="pinnum" text-anchor="end">20</text>
+<text x="1314" y="495" class="pinname " text-anchor="start">IO11</text>
+<text x="1290" y="482" class="pinnum" text-anchor="end">21</text>
+<text x="1314" y="565" class="pinname " text-anchor="start">3V3</text>
+<text x="1290" y="552" class="pinnum" text-anchor="end">3</text>
+<text x="1314" y="705" class="pinname " text-anchor="start">VBAT</text>
+<text x="1290" y="692" class="pinnum" text-anchor="end">15</text>
+<line x1="1255" y1="700" x2="1300" y2="700" class="w"/>
+<g class="ncx"><line x1="1237" y1="693" x2="1251" y2="707"/><line x1="1237" y1="707" x2="1251" y2="693"/></g>
+<text x="1230" y="694" class="sm warnt" text-anchor="end">NO CONNECT. VBAT stays on</text>
+<text x="1230" y="712" class="sm warnt" text-anchor="end">the module internal 3V3 tie.</text>
+<text x="1666" y="305" class="pinname strapt" text-anchor="end">IO8</text>
+<text x="1690" y="292" class="pinnum" text-anchor="start">22</text>
+<circle cx="1672" cy="284" r="4.5" class="strapdot"/>
+<text x="1666" y="355" class="pinname strapt" text-anchor="end">IO9</text>
+<text x="1690" y="342" class="pinnum" text-anchor="start">23</text>
+<circle cx="1672" cy="334" r="4.5" class="strapdot"/>
+<text x="1666" y="405" class="pinname strapt" text-anchor="end">IO25</text>
+<text x="1690" y="392" class="pinnum" text-anchor="start">25</text>
+<circle cx="1672" cy="384" r="4.5" class="strapdot"/>
+<text x="1666" y="475" class="pinname " text-anchor="end">EN</text>
+<text x="1690" y="462" class="pinnum" text-anchor="start">8</text>
+<line x1="1680" y1="300" x2="1780" y2="300" class="w"/>
+<line x1="1780" y1="300" x2="1780" y2="252" class="w"/>
+<line x1="1780" y1="292" x2="1780" y2="272" class="w"/>
+<rect x="1769" y="252" width="22" height="40" class="comp"/>
+<line x1="1780" y1="252" x2="1780" y2="236" class="w"/>
+<line x1="1766" y1="236" x2="1794" y2="236" class="w"/>
+<text x="1780" y="228" class="net" text-anchor="middle">+3V3</text>
+<text x="1796" y="266" class="ref" text-anchor="start">R2</text>
+<text x="1796" y="284" class="val" text-anchor="start">10k</text>
+<text x="2050" y="296" class="sm" text-anchor="start">GPIO8 boot strap: must read high for</text>
+<text x="2050" y="314" class="sm" text-anchor="start">Joint Download Boot. Floats by default.</text>
+<line x1="1680" y1="350" x2="1850" y2="350" class="w"/>
+<line x1="1850" y1="350" x2="1850" y2="302" class="w"/>
+<line x1="1850" y1="342" x2="1850" y2="322" class="w"/>
+<rect x="1839" y="302" width="22" height="40" class="comp"/>
+<line x1="1850" y1="302" x2="1850" y2="286" class="w"/>
+<line x1="1836" y1="286" x2="1864" y2="286" class="w"/>
+<text x="1850" y="278" class="net" text-anchor="middle">+3V3</text>
+<text x="1866" y="316" class="ref" text-anchor="start">R3</text>
+<text x="1866" y="334" class="val" text-anchor="start">10k</text>
+<circle cx="1750" cy="350" r="8" class="pad-o"/>
+<circle cx="1750" cy="350" r="3" class="pad-i"/>
+<text x="1750" y="376" class="ref" text-anchor="middle">TP4</text>
+<text x="1750" y="392" class="val" text-anchor="middle">IO0</text>
+<text x="2050" y="346" class="sm" text-anchor="start">GPIO9 download strap. Keeps the TYWE2L habit</text>
+<text x="2050" y="364" class="sm" text-anchor="start">of holding IO0 low through reset to flash.</text>
+<line x1="1680" y1="400" x2="1920" y2="400" class="w"/>
+<line x1="1920" y1="400" x2="1920" y2="352" class="w hot"/>
+<line x1="1920" y1="392" x2="1920" y2="372" class="w hot"/>
+<rect x="1909" y="352" width="22" height="40" class="comp hotc"/>
+<line x1="1920" y1="352" x2="1920" y2="336" class="w hot"/>
+<line x1="1906" y1="336" x2="1934" y2="336" class="w hot"/>
+<text x="1920" y="328" class="net" text-anchor="middle">+3V3</text>
+<text x="1936" y="366" class="ref hott" text-anchor="start">R4</text>
+<text x="1936" y="384" class="val hott" text-anchor="start">10k</text>
+<path d="M 1874 386 l 9 -16 l 9 16 z" class="hotmark"/>
+<text x="2050" y="388" class="sm hott em" text-anchor="start">SAFETY-CRITICAL PULL-UP.</text>
+<text x="2050" y="406" class="sm" text-anchor="start">GPIO25 has no internal pull and must not float.</text>
+<text x="2050" y="424" class="sm" text-anchor="start">Pull UP, never down: 0 selects the JTAG pads.</text>
+<line x1="1680" y1="470" x2="1990" y2="470" class="w"/>
+<line x1="1990" y1="470" x2="1990" y2="422" class="w"/>
+<line x1="1990" y1="462" x2="1990" y2="442" class="w"/>
+<rect x="1979" y="422" width="22" height="40" class="comp"/>
+<line x1="1990" y1="422" x2="1990" y2="406" class="w"/>
+<line x1="1976" y1="406" x2="2004" y2="406" class="w"/>
+<text x="1990" y="398" class="net" text-anchor="middle">+3V3</text>
+<text x="2006" y="436" class="ref" text-anchor="start">R1</text>
+<text x="2006" y="454" class="val" text-anchor="start">10k</text>
+<line x1="1990" y1="470" x2="1990" y2="506" class="w"/>
+<line x1="1990" y1="518" x2="1990" y2="554" class="w"/>
+<line x1="1973" y1="506" x2="2007" y2="506" class="comp"/>
+<line x1="1973" y1="518" x2="2007" y2="518" class="comp"/>
+<line x1="1990" y1="554" x2="1990" y2="568" class="w"/>
+<line x1="1975" y1="568" x2="2005" y2="568" class="w"/>
+<line x1="1981" y1="573" x2="1999" y2="573" class="w"/>
+<line x1="1986.5" y1="578" x2="1993.5" y2="578" class="w"/>
+<text x="2014" y="516" class="ref" text-anchor="start">C1</text>
+<text x="2014" y="534" class="val" text-anchor="start">1uF</text>
+<circle cx="1990" cy="470" r="4" class="jn"/>
+<circle cx="1750" cy="470" r="8" class="pad-o"/>
+<circle cx="1750" cy="470" r="3" class="pad-i"/>
+<text x="1750" y="496" class="ref" text-anchor="middle">TP3</text>
+<text x="1750" y="512" class="val" text-anchor="middle">RST</text>
+<text x="2050" y="470" class="sm" text-anchor="start">EN power-up RC delay, 10k with 1uF.</text>
+<text x="2050" y="488" class="sm" text-anchor="start">Espressif reference value. EN must not float.</text>
+<text x="1666" y="545" class="pinname " text-anchor="end">TXD0/IO24</text>
+<text x="1690" y="532" class="pinnum" text-anchor="start">31</text>
+<line x1="1680" y1="540" x2="1810" y2="540" class="w"/>
+<circle cx="1810" cy="540" r="8" class="pad-o"/>
+<circle cx="1810" cy="540" r="3" class="pad-i"/>
+<text x="1832" y="536" class="ref" text-anchor="start">TP1</text>
+<text x="1832" y="552" class="val" text-anchor="start">TX</text>
+<text x="2060" y="544" class="sm" text-anchor="start">UART0 console, replicates the TYWE2L TX pad</text>
+<text x="1666" y="585" class="pinname " text-anchor="end">RXD0/IO23</text>
+<text x="1690" y="572" class="pinnum" text-anchor="start">30</text>
+<line x1="1680" y1="580" x2="1810" y2="580" class="w"/>
+<circle cx="1810" cy="580" r="8" class="pad-o"/>
+<circle cx="1810" cy="580" r="3" class="pad-i"/>
+<text x="1832" y="576" class="ref" text-anchor="start">TP2</text>
+<text x="1832" y="592" class="val" text-anchor="start">RX</text>
+<text x="2060" y="584" class="sm" text-anchor="start">UART0 console, replicates the TYWE2L RX pad</text>
+<text x="1666" y="645" class="pinname " text-anchor="end">IO22</text>
+<text x="1690" y="632" class="pinnum" text-anchor="start">24</text>
+<line x1="1680" y1="640" x2="1810" y2="640" class="w"/>
+<circle cx="1810" cy="640" r="8" class="pad-o"/>
+<circle cx="1810" cy="640" r="3" class="pad-i"/>
+<text x="1832" y="636" class="ref" text-anchor="start">TP5</text>
+<text x="1832" y="652" class="val" text-anchor="start">IO2</text>
+<text x="2060" y="644" class="sm" text-anchor="start">spare / secondary log, TYWE2L IO2 pad</text>
+<text x="1666" y="705" class="pinname " text-anchor="end">IO26/USB_D-</text>
+<text x="1690" y="692" class="pinnum" text-anchor="start">26</text>
+<line x1="1680" y1="700" x2="1810" y2="700" class="w"/>
+<circle cx="1810" cy="700" r="8" class="pad-o"/>
+<circle cx="1810" cy="700" r="3" class="pad-i"/>
+<text x="1832" y="696" class="ref" text-anchor="start">TP8</text>
+<text x="1832" y="712" class="val" text-anchor="start">USB_D-</text>
+<text x="2060" y="704" class="sm" text-anchor="start">native USB Serial/JTAG, added beyond the TYWE2L</text>
+<text x="1666" y="745" class="pinname " text-anchor="end">IO27/USB_D+</text>
+<text x="1690" y="732" class="pinnum" text-anchor="start">27</text>
+<line x1="1680" y1="740" x2="1810" y2="740" class="w"/>
+<circle cx="1810" cy="740" r="8" class="pad-o"/>
+<circle cx="1810" cy="740" r="3" class="pad-i"/>
+<text x="1832" y="736" class="ref" text-anchor="start">TP9</text>
+<text x="1832" y="752" class="val" text-anchor="start">USB_D+</text>
+<rect x="1770" y="800" width="630" height="290" class="dash"/>
+<text x="1788" y="826" class="h3" text-anchor="start">SPARE PAD FIELD</text>
+<text x="1940" y="826" class="sm dim" text-anchor="start">rear face, recut for pin mapping v2</text>
+<text x="1666" y="865" class="pinname " text-anchor="end">IO0</text>
+<text x="1690" y="852" class="pinnum" text-anchor="start">9</text>
+<line x1="1680" y1="860" x2="1810" y2="860" class="w"/>
+<circle cx="1810" cy="860" r="8" class="pad-o"/>
+<circle cx="1810" cy="860" r="3" class="pad-i"/>
+<text x="1832" y="865" class="ref" text-anchor="start">TP10</text>
+<text x="1884" y="865" class="val " text-anchor="start">GPIO0</text>
+<text x="2020" y="865" class="sm" text-anchor="start">no boot, strapping or reset role</text>
+<text x="1666" y="905" class="pinname " text-anchor="end">IO1</text>
+<text x="1690" y="892" class="pinnum" text-anchor="start">10</text>
+<line x1="1680" y1="900" x2="1810" y2="900" class="w"/>
+<circle cx="1810" cy="900" r="8" class="pad-o"/>
+<circle cx="1810" cy="900" r="3" class="pad-i"/>
+<text x="1832" y="905" class="ref" text-anchor="start">TP11</text>
+<text x="1884" y="905" class="val " text-anchor="start">GPIO1</text>
+<text x="2020" y="905" class="sm" text-anchor="start">ADC1_CH0. A clean pad.</text>
+<text x="1666" y="945" class="pinname strapt" text-anchor="end">IO2</text>
+<text x="1690" y="932" class="pinnum" text-anchor="start">5</text>
+<circle cx="1672" cy="924" r="4.5" class="strapdot"/>
+<line x1="1680" y1="940" x2="1810" y2="940" class="w"/>
+<circle cx="1810" cy="940" r="8" class="padstrap-o"/>
+<circle cx="1810" cy="940" r="3" class="padstrap-i"/>
+<text x="1832" y="945" class="ref" text-anchor="start">TP12</text>
+<text x="1884" y="945" class="val strapt" text-anchor="start">GPIO2 STRAP</text>
+<text x="2020" y="945" class="sm" text-anchor="start">ADC1_CH1, MTMS. Boot-mode strap, bit 0.</text>
+<text x="1666" y="985" class="pinname strapt" text-anchor="end">IO3</text>
+<text x="1690" y="972" class="pinnum" text-anchor="start">6</text>
+<circle cx="1672" cy="964" r="4.5" class="strapdot"/>
+<line x1="1680" y1="980" x2="1810" y2="980" class="w"/>
+<circle cx="1810" cy="980" r="8" class="padstrap-o"/>
+<circle cx="1810" cy="980" r="3" class="padstrap-i"/>
+<text x="1832" y="985" class="ref" text-anchor="start">TP13</text>
+<text x="1884" y="985" class="val strapt" text-anchor="start">GPIO3 STRAP</text>
+<text x="2020" y="985" class="sm" text-anchor="start">ADC1_CH2, MTDO. Boot-mode strap, bit 1.</text>
+<text x="1666" y="1025" class="pinname " text-anchor="end">IO4</text>
+<text x="1690" y="1012" class="pinnum" text-anchor="start">18</text>
+<line x1="1680" y1="1020" x2="1810" y2="1020" class="w"/>
+<circle cx="1810" cy="1020" r="8" class="pad-o"/>
+<circle cx="1810" cy="1020" r="3" class="pad-i"/>
+<text x="1832" y="1025" class="ref" text-anchor="start">TP14</text>
+<text x="1884" y="1025" class="val " text-anchor="start">GPIO4</text>
+<text x="2020" y="1025" class="sm" text-anchor="start">ADC1_CH3, MTCK. After-reset pull-up.</text>
+<text x="1666" y="1065" class="pinname " text-anchor="end">IO5</text>
+<text x="1690" y="1052" class="pinnum" text-anchor="start">19</text>
+<line x1="1680" y1="1060" x2="1810" y2="1060" class="w"/>
+<circle cx="1810" cy="1060" r="8" class="pad-o"/>
+<circle cx="1810" cy="1060" r="3" class="pad-i"/>
+<text x="1832" y="1065" class="ref" text-anchor="start">TP15</text>
+<text x="1884" y="1065" class="val " text-anchor="start">GPIO5</text>
+<text x="2020" y="1065" class="sm" text-anchor="start">ADC1_CH4, MTDI. CH4 dead on rev v0.0/v0.1.</text>
+<line x1="1400" y1="1105" x2="1400" y2="1160" class="w"/>
+<text x="1414" y="1127" class="sm" text-anchor="start">GND  pins 1, 2, 11, 14,</text>
+<text x="1414" y="1145" class="sm" text-anchor="start">36..53 and EPAD 49</text>
+<circle cx="1400" cy="1160" r="4" class="jn"/>
+<line x1="1400" y1="1160" x2="1400" y2="1174" class="w"/>
+<line x1="1385" y1="1174" x2="1415" y2="1174" class="w"/>
+<line x1="1391" y1="1179" x2="1409" y2="1179" class="w"/>
+<line x1="1396.5" y1="1184" x2="1403.5" y2="1184" class="w"/>
+<line x1="1400" y1="1160" x2="1590" y2="1160" class="w"/>
+<circle cx="1490" cy="1160" r="8" class="pad-o"/>
+<circle cx="1490" cy="1160" r="3" class="pad-i"/>
+<circle cx="1590" cy="1160" r="8" class="pad-o"/>
+<circle cx="1590" cy="1160" r="3" class="pad-i"/>
+<text x="1490" y="1190" class="ref" text-anchor="middle">TP6</text>
+<text x="1490" y="1206" class="val" text-anchor="middle">GND</text>
+<text x="1590" y="1190" class="ref" text-anchor="middle">TP7</text>
+<text x="1590" y="1206" class="val" text-anchor="middle">GND</text>
+<line x1="1660" y1="1105" x2="1660" y2="1122" class="w"/>
+<g class="ncx"><line x1="1653" y1="1125" x2="1667" y2="1139"/><line x1="1653" y1="1139" x2="1667" y2="1125"/></g>
+<text x="1676" y="1114" class="sm" text-anchor="start">NC  pins 4, 7, 17, 28, 29, 32..35</text>
+</svg></div>
+  <figcaption>The whole carrier on one sheet. Host legs enter at bottom left in physical left-to-right order as seen from the module face, pass through the 0R series links R10 to R14, and land on the five ESP32-H2 pins that are neither strapping pins nor JTAG pads. Support circuitry, the rear test pads and the spare pad field sit to the right of U1.</figcaption>
+</figure>
+
+<section>
+  <h2>Legend</h2>
+  <ul class="keys">
+<li><svg class="key" viewBox="0 0 52 26" aria-hidden="true"><line x1="4" y1="13" x2="48" y2="13" class="w"/><circle cx="26" cy="13" r="4" class="jn"/></svg><span><b>Wire and junction.</b> A dot marks a connected node.</span></li>
+<li><svg class="key" viewBox="0 0 52 26" aria-hidden="true"><line x1="4" y1="13" x2="15" y2="13" class="w"/><rect x="15" y="4" width="22" height="18" class="comp"/><line x1="37" y1="13" x2="48" y2="13" class="w"/></svg><span><b>Fitted component.</b> Solid outline, designator and value as the schematic has them.</span></li>
+<li><svg class="key" viewBox="0 0 52 26" aria-hidden="true"><line x1="4" y1="13" x2="15" y2="13" class="w"/><rect x="15" y="4" width="22" height="18" class="dnpc"/><line x1="37" y1="13" x2="48" y2="13" class="w"/></svg><span><b>DNP, not fitted.</b> Dashed outline and grey text: the footprint exists, the part does not.</span></li>
+<li><svg class="key" viewBox="0 0 52 26" aria-hidden="true"><line x1="4" y1="13" x2="15" y2="13" class="w"/><rect x="15" y="3" width="22" height="20" class="hotc"/><line x1="37" y1="13" x2="48" y2="13" class="hot"/><path d="M 20 34 l 6 -10 l 6 10 z" class="hotmark"/></svg><span><b>Safety-critical.</b> R4 only. Warm outline plus a triangle mark.</span></li>
+<li><svg class="key" viewBox="0 0 52 26" aria-hidden="true"><circle cx="14" cy="13" r="4.5" class="strapdot"/><text x="26" y="17" class="strapt" style="font-size:11px;font-weight:650">STRAP</text></svg><span><b>Strapping pin.</b> Latched at reset into <code>GPIO_STRAP_REG</code>. Never load one.</span></li>
+<li><svg class="key" viewBox="0 0 52 26" aria-hidden="true"><line x1="4" y1="13" x2="20" y2="13" class="w"/><circle cx="28" cy="13" r="8" class="pad-o"/><circle cx="28" cy="13" r="3" class="pad-i"/></svg><span><b>Rear-face test pad.</b> All fifteen pads sit on the back of the carrier.</span></li>
+<li><svg class="key" viewBox="0 0 52 26" aria-hidden="true"><line x1="4" y1="6" x2="48" y2="20" class="xw"/><line x1="4" y1="20" x2="48" y2="6" class="xw"/></svg><span><b>Naming crossover.</b> Where an ESP8285 leg number and an H2 pin number collide.</span></li>
+<li><svg class="key" viewBox="0 0 52 26" aria-hidden="true"><line x1="8" y1="4" x2="8" y2="18" class="w"/><line x1="1" y1="18" x2="15" y2="18" class="w"/><line x1="4" y1="21" x2="12" y2="21" class="w"/><line x1="6.5" y1="24" x2="9.5" y2="24" class="w"/><line x1="34" y1="20" x2="34" y2="8" class="w"/><line x1="27" y1="8" x2="41" y2="8" class="w"/><text x="34" y="4" text-anchor="middle" class="net">+3V3</text></svg><span><b>Power flags.</b> GND and +3V3 symbols name the rail, exactly as on the sheet.</span></li>
+</ul>
+</section>
+
+<section>
+  <h2>Notes and constraints</h2>
+  <div class="notes">
+<div><h3 class="flag">VBAT must never be fed separately</h3><p>Module pin 15 is left unconnected and carries a no-connect flag, so VBAT stays on the module internal 3V3 tie. H2 GPIO12, GPIO13 and GPIO14, which are legs 3, 1 and 2, sit on the VBAT / VDDA_PMU domain, and logic thresholds are referred to whichever domain the pin sits on. Feed VBAT from a battery and three of the five legs take different thresholds and different output swings from the other two, on the same host connector, with nothing to warn anybody. This is a constraint, not a default.</p></div>
+<div><h3 class="flag">The leg hole diameter is an assumption</h3><p>The 0.9 mm hole on a 1.4 mm pad in J1 is a guess, not a measurement. Tuya never publishes the leg diameter. Every routing-channel figure scales off it: a 1.0 mm hole with a 1.5 mm pad drops the leg-to-module channel from 0.750 to 0.700 mm. Caliper a physical TYWE2L before ordering boards. This is a fabrication blocker.</p></div>
+<div><h3>The antenna keepout sets the height</h3><p>The keepout is the top 5.4 mm of the module across its full 13.2 mm width, with no FR4 and no copper under it. That caps the carrier at 13.6 mm tall and pushes the assembly to 19.0 mm, against 17.272 mm for the TYWE2L it replaces. The stack thickness still matches at 0.6 mm PCB plus 2.4 mm module.</p></div>
+<div><h3 class="flag">R4 pulls GPIO25 up, never down</h3><p>GPIO25 has no internal pull resistor and its strapping value must be set externally, so it cannot be left floating. A 0 on GPIO25 selects the JTAG pads MTDI, MTCK, MTMS and MTDO. Under pin mapping v2 none of those four is a host line, so R4 can no longer seize a host net, but the direction stays fixed. Do not tidy it to a pull-down.</p></div>
+<div><h3>The links are fitted, the pull-downs are not</h3><p>R10 to R14 are 0R 0402 links fitted by default. Remove one to isolate a contentious host net during bring-up. R20 to R24 are 10k pull-downs sitting on the host side of those links, not fitted, kept as optional insurance for an unknown host. Nothing on the carrier side depends on them: all five v2 host pins come out of reset with input disabled, output disabled and no pull.</p></div>
+<div><h3>No leg touches a strapping pin</h3><p>GPIO_STRAP_REG latches GPIO2, GPIO3, GPIO8, GPIO9 and GPIO25. All five v2 host lines avoid the lot, so nothing a host device does to a leg can change boot mode. GPIO2 and GPIO3 remain reachable on spare pads TP12 and TP13, which is why those two are marked. GPIO4 on TP14 carries an after-reset pull-up and is vetoed as a host line outright.</p></div>
+</div>
+</section>
+
+<section>
+  <h2>Mechanical</h2>
+  <figure>
+    <svg class="mech" viewBox="0 0 560 594" role="img" aria-label="Mechanical outline: a 15.0 by 13.6 millimetre carrier board with the ESP32-H2 module overhanging 5.4 millimetres above the top edge into the antenna keepout, and seven legs on 2.0 millimetre pitch spanning 12.0 millimetres and protruding 3.454 millimetres below the board.">
+<defs><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" class="hatchline"/></pattern></defs>
+<rect x="136.2" y="58" width="237.6" height="97.2" class="keep"/>
+<rect x="136.2" y="58" width="237.6" height="298.8" class="modbox"/>
+<text x="255" y="110.6" class="tiny em" text-anchor="middle">ANTENNA KEEPOUT</text>
+<text x="255" y="126.6" class="tiny" text-anchor="middle">no FR4, no copper</text>
+<text x="255" y="265" class="sm em" text-anchor="middle">ESP32-H2-MINI-1-H4S</text>
+<text x="255" y="283" class="tiny" text-anchor="middle">13.2 x 16.6 x 2.4 mm</text>
+<rect x="120" y="155.2" width="270" height="244.8" class="carbox"/>
+<text x="255" y="336" class="tiny" text-anchor="middle">carrier, 0.6 mm FR4</text>
+<circle cx="145.848" cy="377.5" r="12.6" class="padring"/>
+<circle cx="145.848" cy="377.5" r="8.1" class="padhole"/>
+<line x1="145.848" y1="400" x2="145.848" y2="462.172" class="legline"/>
+<circle cx="181.848" cy="377.5" r="12.6" class="padring"/>
+<circle cx="181.848" cy="377.5" r="8.1" class="padhole"/>
+<line x1="181.848" y1="400" x2="181.848" y2="462.172" class="legline"/>
+<circle cx="217.848" cy="377.5" r="12.6" class="padring"/>
+<circle cx="217.848" cy="377.5" r="8.1" class="padhole"/>
+<line x1="217.848" y1="400" x2="217.848" y2="462.172" class="legline"/>
+<circle cx="253.848" cy="377.5" r="12.6" class="padring"/>
+<circle cx="253.848" cy="377.5" r="8.1" class="padhole"/>
+<line x1="253.848" y1="400" x2="253.848" y2="462.172" class="legline"/>
+<circle cx="289.848" cy="377.5" r="12.6" class="padring"/>
+<circle cx="289.848" cy="377.5" r="8.1" class="padhole"/>
+<line x1="289.848" y1="400" x2="289.848" y2="462.172" class="legline"/>
+<circle cx="325.848" cy="377.5" r="12.6" class="padring"/>
+<circle cx="325.848" cy="377.5" r="8.1" class="padhole"/>
+<line x1="325.848" y1="400" x2="325.848" y2="462.172" class="legline"/>
+<circle cx="361.848" cy="377.5" r="12.6" class="padring"/>
+<circle cx="361.848" cy="377.5" r="8.1" class="padhole"/>
+<line x1="361.848" y1="400" x2="361.848" y2="462.172" class="legline"/>
+<line x1="120" y1="155.2" x2="96" y2="155.2" class="ext"/>
+<line x1="120" y1="400" x2="64" y2="400" class="ext"/>
+<line x1="136.2" y1="58" x2="64" y2="58" class="ext"/>
+<line x1="100" y1="155.2" x2="100" y2="400" class="dim"/>
+<line x1="95" y1="155.2" x2="105" y2="155.2" class="dim"/>
+<line x1="95" y1="400" x2="105" y2="400" class="dim"/>
+<text x="92" y="281.6" class="dimt" text-anchor="end">13.6</text>
+<line x1="68" y1="58" x2="68" y2="400" class="dim"/>
+<line x1="63" y1="58" x2="73" y2="58" class="dim"/>
+<line x1="63" y1="400" x2="73" y2="400" class="dim"/>
+<text x="60" y="233" class="dimt" text-anchor="end">19.0</text>
+<line x1="373.8" y1="58" x2="426" y2="58" class="ext"/>
+<line x1="373.8" y1="155.2" x2="426" y2="155.2" class="ext"/>
+<line x1="414" y1="58" x2="414" y2="155.2" class="dim"/>
+<line x1="409" y1="58" x2="419" y2="58" class="dim"/>
+<line x1="409" y1="155.2" x2="419" y2="155.2" class="dim"/>
+<text x="422" y="110.6" class="dimt" text-anchor="start">5.4</text>
+<line x1="390" y1="400" x2="426" y2="400" class="ext"/>
+<line x1="361.848" y1="462.172" x2="426" y2="462.172" class="ext"/>
+<line x1="414" y1="400" x2="414" y2="462.172" class="dim"/>
+<line x1="409" y1="400" x2="419" y2="400" class="dim"/>
+<line x1="409" y1="462.172" x2="419" y2="462.172" class="dim"/>
+<text x="422" y="435.086" class="dimt" text-anchor="start">3.454</text>
+<line x1="145.848" y1="462.172" x2="145.848" y2="500" class="ext"/>
+<line x1="361.848" y1="462.172" x2="361.848" y2="500" class="ext"/>
+<line x1="145.848" y1="492" x2="361.848" y2="492" class="dim"/>
+<line x1="145.848" y1="487" x2="145.848" y2="497" class="dim"/>
+<line x1="361.848" y1="487" x2="361.848" y2="497" class="dim"/>
+<text x="253.848" y="484" class="dimt" text-anchor="middle">12.0</text>
+<line x1="120" y1="400" x2="120" y2="530" class="ext"/>
+<line x1="390" y1="400" x2="390" y2="530" class="ext"/>
+<line x1="120" y1="522" x2="390" y2="522" class="dim"/>
+<line x1="120" y1="517" x2="120" y2="527" class="dim"/>
+<line x1="390" y1="517" x2="390" y2="527" class="dim"/>
+<text x="255" y="514" class="dimt" text-anchor="middle">15.0</text>
+<line x1="145.848" y1="474" x2="181.848" y2="474" class="dim"/>
+<line x1="145.848" y1="469" x2="145.848" y2="479" class="dim"/>
+<line x1="181.848" y1="469" x2="181.848" y2="479" class="dim"/>
+<text x="163.848" y="466" class="dimt" text-anchor="middle">2.0</text>
+<text x="64" y="558" class="tiny warnt" text-anchor="start">Leg hole 0.9 mm on a 1.4 mm pad is an ASSUMPTION. Caliper a physical TYWE2L.</text>
+<text x="64" y="576" class="tiny dim" text-anchor="start">All dimensions in mm. Leg row sits 0.064 mm left of centre, as the original does.</text>
+</svg>
+    <figcaption>Front elevation. The carrier matches the TYWE2L width exactly at 15.0 mm but stops 13.6 mm up, so the top 5.4 mm of the module hangs over the edge into free air and the antenna keeps clear of copper and FR4. The seven legs sit on 2.0 mm pitch over a 12.0 mm span and protrude 3.454 mm below the board, reproducing the original part including its 0.064 mm off-centre row.</figcaption>
+  </figure>
+</section>
+
+<div class="src">
+  Source of truth: hardware/carrier/tywe2l-h2-carrier.kicad_sch (KiCad 10, version 20260306)<br>
+  Pin mapping v2 authority: docs/pin-mapping-v2.md &nbsp;/&nbsp; design record: hardware/DESIGN.md<br>
+  SPDX-License-Identifier: CERN-OHL-S-2.0
+</div>
+</div>

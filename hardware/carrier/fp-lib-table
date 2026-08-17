@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "TYWE2L-2-THREAD")(type "KiCad")(uri "${KIPRJMOD}/../lib/TYWE2L-2-THREAD.pretty")(options "")(descr "TYWE2L-2-THREAD project footprints. SPDX-License-Identifier: CERN-OHL-S-2.0"))
+)
