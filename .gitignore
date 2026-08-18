@@ -62,6 +62,10 @@ dependencies.lock
 *.elf
 *.map
 size_report.txt
+# EIM (ESP-IDF Installation Manager) local config and pyenv version pin.
+# Machine-specific (absolute local paths), not project content.
+eim_config.toml
+.python-version
 # Built images are published deliberately via the installer site, not here.
 firmware/**/*.bin
 

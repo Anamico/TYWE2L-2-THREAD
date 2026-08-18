@@ -1,0 +1,49 @@
+# Verbatim copy of espressif/esp-matter's examples/light/sdkconfig.defaults.esp32h2
+# (Apache-2.0). ESP-IDF automatically layers this on top of sdkconfig.defaults
+# when CONFIG_IDF_TARGET=esp32h2, i.e. after `idf.py set-target esp32h2`.
+# This is what actually makes the build Thread-only: OpenThread on, Wi-Fi
+# station off. The H2 has no Wi-Fi radio, so CONFIG_ENABLE_WIFI_STATION=n
+# here is confirming the hardware reality, not a meaningful choice.
+
+CONFIG_IDF_TARGET="esp32h2"
+
+# Enable OpenThread
+CONFIG_OPENTHREAD_ENABLED=y
+CONFIG_OPENTHREAD_SRP_CLIENT=y
+CONFIG_OPENTHREAD_LOG_LEVEL_DYNAMIC=n
+CONFIG_OPENTHREAD_LOG_LEVEL_NOTE=y
+
+# Tried on for diagnostic purposes (RSSI/LQI and packet counters during the
+# commissioning-stall investigation, see main/app_main.cpp's
+# start_openthread_cli_once()) and reverted: on real hardware it flooded the
+# console with repeated ">" prompts rather than giving a usable interactive
+# session, most likely esp_openthread_cli_create_task()'s dedicated CLI task
+# fighting the same UART as normal log output rather than being wrapped in a
+# proper esp_console REPL with its own line-editing/blocking read. Left off.
+# start_openthread_cli_once() itself is untouched and still compiles out
+# cleanly behind CONFIG_OPENTHREAD_CLI, so it's there to revisit later if the
+# UART conflict gets sorted out, but do not just flip this back to y as-is.
+CONFIG_OPENTHREAD_CLI=n
+
+# Default (65) is too low for this build: BLE commissioning, Thread, and SRP
+# operational-service registration all run close together, and the SRP client
+# was observed failing service registration with OT_ERROR_NO_BUFS (3) at that
+# point, which stalls commissioning until the fail-safe timer expires and
+# rolls the whole thing back. Each buffer is a small, fixed OpenThread
+# constant (~128 bytes), so even this near-doubling costs only a few KB
+# against this chip's ~157KB heap. Conservative first try; raise further
+# (e.g. 192) if OT_ERROR_NO_BUFS still appears in the console log.
+CONFIG_OPENTHREAD_NUM_MESSAGE_BUFFERS=128
+
+# Disable lwip ipv6 autoconfig
+CONFIG_LWIP_IPV6_AUTOCONFIG=n
+
+# LwIP config for OpenThread
+CONFIG_LWIP_IPV6_NUM_ADDRESSES=8
+CONFIG_LWIP_MULTICAST_PING=y
+
+# MDNS platform
+CONFIG_USE_MINIMAL_MDNS=n
+
+# Disable STA
+CONFIG_ENABLE_WIFI_STATION=n

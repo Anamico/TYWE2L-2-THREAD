@@ -22,6 +22,9 @@ seat. Nothing else on this page stops a board being cut.
 | `docs/flasher-and-registry.md` | Flashing transport, web installer architecture, profile schema, registry design |
 | `docs/tasmota-import.md` | Importing Tasmota templates as device profiles, and what does not survive the trip |
 | `docs/matter-identity-and-certification.md` | VID/PID, attestation, the certification wall |
+| `software/matter-onoff-poc/README.md` | Matter-over-Thread feasibility PoC on the DevKitM-1's own LED, not the TYWE2L device |
+| `docs/provisioning/README.md` | Index for the build-to-labelled-unit provisioning flow, stage by stage |
+| `docs/provisioning/01-firmware-build-and-flash.md` | Toolchain setup, build, `esp-matter-mfg-tool` batch identity generation, flash, and every gotcha hit doing it for real |
 | `tools/tasmota-import/README.md` | Converter specification and output schema |
 
 ## First target device
@@ -62,6 +65,9 @@ the first firmware variant should serve it.
   deliberate and costs the discovery work nothing.
 - **Tasmota template import** feasibility and converter specification. See
   `docs/tasmota-import.md`.
+- **Matter-over-Thread on/off light PoC**, not build-tested, targeting the DevKitM-1's own onboard
+  LED rather than the TYWE2L device, to test toolchain and hardware feasibility before more design
+  effort goes into the real firmware. See `software/matter-onoff-poc/README.md`.
 
 ## Settled decisions (do not re-litigate)
 
