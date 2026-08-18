@@ -27,6 +27,12 @@ fctry/
 mfg_out/
 **/matter_credentials/
 
+# --- Third-party hardware reverse engineering --------------------------------
+# Photos, teardown notes and board dumps of commercial host devices (e.g. the
+# Connect SmartHome downlights). Not our IP to publish; local-only working
+# material for the leg-reversing effort.
+hardware/smarthome/
+
 # --- KiCad ------------------------------------------------------------------
 *-backups/
 *.kicad_prl
